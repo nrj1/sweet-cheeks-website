@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+  <title>Sweet Cheeks — Hyperpop Scrapbook (Order-Forward Edition)</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <!-- Fredoka & Quicksand for bubbly, hyperpop retro candy typography -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700;800;900&amp;family=Quicksand:wght@600;700;800&amp;family=Rubik:wght@800;900&amp;display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+      }
+
+      html {
+        scroll-padding-top: 114px;
+      }
+
+      body {
+        overscroll-behavior: none;
+        background-color: #FFF9F1;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    .washi-tape-pink {
+      background: rgba(255, 111, 203, 0.88);
+      backdrop-filter: blur(2px);
+      box-shadow: 0 1px 3px rgba(36, 17, 49, 0.15);
+    }
+
+    .washi-tape-cyan {
+      background: rgba(51, 220, 230, 0.88);
+      backdrop-filter: blur(2px);
+      box-shadow: 0 1px 3px rgba(36, 17, 49, 0.15);
+    }
+
+    .washi-tape-lilac {
+      background: rgba(179, 104, 240, 0.88);
+      backdrop-filter: blur(2px);
+      box-shadow: 0 1px 3px rgba(36, 17, 49, 0.15);
+    }
+
+    .pop-shadow {
+      box-shadow: 4px 4px 0px #241131;
+    }
+
+    .pop-shadow-lg {
+      box-shadow: 7px 7px 0px #241131;
+    }
+
+    .pop-shadow-pink {
+      box-shadow: 6px 6px 0px #FF6FCB;
+    }
+
+    .pop-shadow-cyan {
+      box-shadow: 6px 6px 0px #33DCE6;
+    }
+
+    .pop-shadow-white {
+      box-shadow: 5px 5px 0px #FFFFFF;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "cream": "#FFF9F1",
+            "candy-pink": "#FF6FCB",
+            "candy-cyan": "#33DCE6",
+            "candy-lilac": "#B368F0",
+            "dark-plum": "#241131",
+            "primary": "#FF6FCB",
+            "secondary": "#33DCE6",
+            "tertiary": "#B368F0",
+            "on-surface": "#241131",
+            "on-primary": "#ffffff",
+            "surface-container": "#fae8ff"
+          },
+          fontFamily: {
+            "display": ["Fredoka", "Rubik", "cursive", "sans-serif"],
+            "bubbly": ["Fredoka", "sans-serif"],
+            "body": ["Quicksand", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body
+  class="bg-[#FFF9F1] font-body text-[#241131] antialiased selection:bg-[#FF6FCB] selection:text-[#241131] overflow-x-hidden">
+  <!-- 1. PERSISTENT UTILITY & COMMERCE TICKER -->
+  <div class="fixed top-0 left-0 right-0 z-50 bg-[#33DCE6] border-b-[3px] border-[#241131] py-1.5 px-3 select-none">
+    <div
+      class="max-w-7xl mx-auto flex items-center justify-between gap-3 text-[11px] sm:text-[12px] font-display font-extrabold uppercase text-[#241131] tracking-wide">
+      <div class="flex items-center gap-2 overflow-x-auto whitespace-nowrap py-0.5">
+        <span class="inline-flex items-center gap-1 bg-[#241131] text-[#33DCE6] px-2.5 py-0.5 rounded-full text-[11px]">
+          🎪 Santa Fe Square Tent Pickup (Wed 4:30 – 7:30 PM)
+        </span>
+        <span
+          class="hidden md:inline-flex items-center gap-1 bg-white text-[#241131] border border-[#241131] px-2 py-0.5 rounded-full text-[11px]">
+          🚚 Tulsa Doorstep Courier (Wed &amp; Fri Drops)
+        </span>
+      </div>
+      <div class="flex items-center gap-2 whitespace-nowrap">
+        <span
+          class="bg-[#FF6FCB] text-[#241131] border border-[#241131] px-2.5 py-0.5 rounded-full text-[10px] sm:text-[11px] font-black animate-pulse">
+          🔥 Wednesday Batch 78% Reserved · Locks Tuesday Midnight
+        </span>
+      </div>
+    </div>
+  </div>
+  <!-- MAIN RETRO COMMERCE NAVIGATION -->
+  <header class="fixed top-[34px] left-0 right-0 z-40 bg-[#FFF9F1]/95 backdrop-blur-md border-b-[3px] border-[#241131]">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 h-20 flex items-center justify-between gap-4">
+      <!-- Brand Logo -->
+      <a class="flex items-center gap-2.5 group" href="#" data-path="home">
+        <img alt="Sweet Cheeks Logo"
+          class="h-13 sm:h-14 w-auto object-contain hover:rotate-[-4deg] transition-transform duration-200"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd68yWTkauPOvG6TDW0A8l043Fles0gN0YBc1CpmYY9PNrab16-3Dn9r4AWa0kyaxAcDqvynH_9KnxPUfgPytIr7BlUlwvGlky6JblstUC2ek9QRX4PaepzJPAV7ycwHf7REwmii1auNYuFa7IBVueBt72Jm0elM1MNPggZSQ_Iq-b_0B44jjIcDL2qUT4UIruGkkpfHsztgE-hwEq6_0i0_c-A669o0ANIA4Fm_FK1keioay_5q0rkdWFZ9QixNXoig">
+      </a>
+      <!-- Navigation Pills with Y2K Pop Borders -->
+      <nav class="hidden lg:flex items-center gap-2 font-display text-[14px] font-bold"><a
+          class="bg-[#FF6FCB] text-[#241131] px-4 py-1.5 rounded-full border-2 border-[#241131] pop-shadow hover:-translate-y-0.5 transition-all whitespace-nowrap cursor-pointer"
+          data-path="home" href="#home">Home ✦</a><a
+          class="bg-white hover:bg-[#fae8ff] text-[#241131] px-3.5 py-1.5 rounded-full border-2 border-[#241131] hover:-translate-y-0.5 transition-all whitespace-nowrap cursor-pointer"
+          data-path="flavor-menu" href="#vault" title="View Stuffed Cookie Flavors">Flavor Vault</a><a
+          class="bg-white hover:bg-[#33DCE6]/20 text-[#241131] px-3.5 py-1.5 rounded-full border-2 border-[#241131] hover:-translate-y-0.5 transition-all whitespace-nowrap cursor-pointer"
+          href="#box-builder">Build 6-Pack</a><a
+          class="bg-white hover:bg-[#B368F0]/20 text-[#241131] px-3.5 py-1.5 rounded-full border-2 border-[#241131] hover:-translate-y-0.5 transition-all whitespace-nowrap cursor-pointer"
+          href="#tent">Tent Pop-Up</a><a
+          class="bg-white hover:bg-[#fae8ff] text-[#241131] px-3.5 py-1.5 rounded-full border-2 border-[#241131] hover:-translate-y-0.5 transition-all whitespace-nowrap cursor-pointer"
+          data-path="find-us-and-order" href="#checkout" title="Contact &amp; FAQ / Pickups" style="opacity: 0;">Contact
+          &amp; FAQ</a></nav>
+      <!-- Header Commerce Interactive Cart Badge & Action -->
+      <div class="flex items-center gap-2.5">
+        <a class="flex items-center gap-1.5 bg-white border-2 border-[#241131] px-3 py-1.5 rounded-full font-display text-[13px] font-extrabold pop-shadow hover:bg-[#fae8ff] transition-all"
+          href="#box-builder">
+          <span class="text-[16px]">🍪</span>
+          <span id="nav-cart-badge" class="">Box: 0/6 Slots ($0.00)</span>
+        </a>
+        <a class="inline-flex items-center gap-1.5 font-display text-[13px] sm:text-[14px] font-black text-[#241131] bg-[#33DCE6] hover:brightness-105 active:translate-x-0.5 active:translate-y-0.5 px-4 sm:px-5 py-2 rounded-full border-[2.5px] border-[#241131] pop-shadow hover:-translate-y-0.5 transition-all whitespace-nowrap"
+          href="#checkout" data-path="find-us-and-order">
+          <span id="nav-checkout-btn" class="">Proceed to Order ($0.00) 🛍️</span>
+        </a>
+      </div>
+    </div>
+  </header>
+  <main class="w-full pt-32" id="home">
+    <!-- 2. HERO SECTION AS A DIRECT PRODUCT & ORDER CONVERSION GATEWAY -->
+    <section
+      class="w-full px-4 md:px-8 py-10 lg:py-16 relative overflow-hidden border-b-[3px] border-[#241131] bg-[#FFF9F1]">
+      <!-- Background Doodles & Floating Stickers -->
+      <div
+        class="absolute -top-10 -right-10 w-72 h-72 bg-[#fae8ff] rounded-full filter blur-3xl opacity-70 pointer-events-none">
+      </div>
+      <div
+        class="absolute top-1/2 left-2 w-56 h-56 bg-[#33DCE6]/25 rounded-full filter blur-2xl opacity-60 pointer-events-none">
+      </div>
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Left Column: Bold Pop Scrapbook Headline + Commerce CTA Gateway -->
+        <div class="lg:col-span-6 flex flex-col items-start gap-5 relative z-10">
+          <!-- Sticker Cluster Tag -->
+          <div class="flex flex-wrap items-center gap-2">
+            <span
+              class="inline-block -rotate-3 washi-tape-pink text-[#241131] px-3.5 py-1 rounded-sm border-2 border-[#241131] font-display font-black text-[12px] uppercase tracking-wider shadow-sm">
+              ★ 100% UNREGRETFUL
+            </span>
+            <span
+              class="inline-block rotate-2 washi-tape-cyan text-[#241131] px-3.5 py-1 rounded-sm border-2 border-[#241131] font-display font-black text-[12px] uppercase tracking-wider shadow-sm">
+              CERTIFIED CHONK
+            </span>
+            <span
+              class="inline-block -rotate-1 bg-[#B368F0] text-white px-3.5 py-1 rounded-full border-2 border-[#241131] font-display font-extrabold text-[12px] uppercase tracking-wider pop-shadow">
+              TULSA OK MAGIC
+            </span>
+          </div>
+          <!-- Radical Hyperpop Headline -->
+          <h1
+            class="font-display font-black text-[42px] sm:text-[54px] xl:text-[66px] text-[#241131] leading-[0.98] tracking-tight">
+            WARNING: <br>
+            <span
+              class="bg-[#FF6FCB] text-white px-2.5 py-0.5 inline-block -rotate-1 rounded-xl border-[3px] border-[#241131] pop-shadow">DANGEROUSLY</span>
+            SILLY, <br>
+            SERIOUSLY <span class="text-[#B368F0] underline decoration-wavy decoration-[#33DCE6]">STUFFED.</span>
+          </h1>
+          <!-- Subtitle & Value Pricing Highlight -->
+          <p class="font-body text-[17px] md:text-[19px] font-bold text-[#241131]/90 leading-snug max-w-lg">
+            Quarter-pound emotional support monsters hand-packed with molten joy, whole snack cakes, and scratch ganache
+            in Tulsa, OK.
+          </p>
+          <div
+            class="inline-flex items-center gap-2 bg-[#FFF9F1] border-2 border-[#241131] px-3.5 py-1.5 rounded-full font-display text-[13px] font-black text-[#241131] pop-shadow">
+            <span class="text-[#FF6FCB]">✦</span> $6.50 Singles · $30 for 6 ($5.00/ea) — Save $9.00 on Box Bundles
+          </div>
+          <!-- High-Converting Direct Action CTAs -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a class="inline-flex items-center gap-2 font-display text-[15px] md:text-[17px] font-black text-[#241131] bg-[#FF6FCB] hover:brightness-105 active:translate-x-0.5 active:translate-y-0.5 px-7 py-3.5 rounded-full border-[3px] border-[#241131] pop-shadow-lg hover:-translate-y-1 transition-all"
+              href="#box-builder">
+              <span class="">BUILD CUSTOM 6-PACK ($30) — SAVE $9 ✦</span>
+            </a>
+            <button
+              class="inline-flex items-center gap-2 font-display text-[14px] md:text-[15px] font-black text-[#241131] bg-[#33DCE6] hover:brightness-105 active:translate-x-0.5 active:translate-y-0.5 px-6 py-3.5 rounded-full border-2 border-[#241131] pop-shadow hover:-translate-y-0.5 transition-all"
+              onclick="autoPackBestsellers()">
+              <span class="">QUICK-ADD SIGNATURE 6-BOX ⚡</span>
+            </button>
+          </div>
+          <!-- Micro Feature Badges -->
+          <div
+            class="pt-2 flex flex-wrap items-center gap-5 text-[#241131] font-display text-[12px] md:text-[13px] font-bold">
+            <div class="flex items-center gap-1.5">
+              <span class="text-[#FF6FCB] text-[18px]">★</span> Half-Pound Monsters
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="text-[#33DCE6] text-[18px]">●</span> Scratch Baked Chilled 24h
+            </div>
+            <a class="flex items-center gap-1.5 hover:text-[#FF6FCB] transition-colors cursor-pointer"
+              data-path="find-us-and-order" href="#checkout"><span class="text-[#B368F0] text-[18px]">♥</span> Downtown
+              Tent Pickup or Courier</a>
+          </div>
+        </div>
+        <!-- Right Column: Expansive Scrapbook Visual Showcase (Assortment Box + Molten Cookie Close-up) -->
+        <div
+          class="lg:col-span-6 relative mt-4 lg:mt-0 flex justify-center items-center min-h-[460px] md:min-h-[540px]">
+          <!-- Big Pink Circle Stamp Behind -->
+          <div
+            class="absolute w-[360px] h-[360px] md:w-[440px] md:h-[440px] rounded-full bg-[#fae8ff] border-[3px] border-dashed border-[#B368F0]/60 -z-0">
+          </div>
+          <!-- Polaroid 1: Assortment Box (IMAGE_45) (Tilted Left) -->
+          <div
+            class="absolute -left-2 sm:left-4 top-2 sm:top-6 w-[270px] sm:w-[320px] md:w-[360px] bg-white p-3 pb-8 rounded-2xl border-[3px] border-[#241131] pop-shadow-lg -rotate-6 hover:rotate-0 hover:z-30 transition-all duration-300">
+            <div
+              class="absolute -top-3 left-1/2 -translate-x-1/2 w-28 h-6 washi-tape-cyan border border-[#241131] rotate-2 z-20">
+            </div>
+            <div class="w-full aspect-[4/3] rounded-xl overflow-hidden border-2 border-[#241131] bg-[#FFF9F1]">
+              <img alt="Sweet Cheeks 6 pack assortment box top down" class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida/AEtjO1U2aPj56k7PlthYsu3au7D4sgLhfSZKhIAJz-cuQN2QCLUHi0G3pvEIlMH9uHlr92jpoJ0u-PbFdFbMKYzja3RqDbbS10xh53_iM71cvlLwr7KzQvOiAaZ2MPi8l6pcJPOXBRxGW79HLArqGyCzLBR2dVX7i8AKJbtUfIEX8BcTJmgeb7FstryKlhM5LQ7lgR_vUdYjM0WgsltwmUUiElc_MfTNWNPL6uv5F7B85tBbuYv6gEvofhFnKfQ">
+            </div>
+            <div class="mt-3 px-1 flex items-center justify-between font-display">
+              <span class="text-[14px] font-black text-[#241131]">THE 6-PACK SURVIVAL KIT</span>
+              <span
+                class="text-[12px] bg-[#33DCE6] text-[#241131] px-2 py-0.5 rounded-full font-bold border border-[#241131]">$30
+                BUNDLE</span>
+            </div>
+          </div>
+          <!-- Polaroid 2: Molten Cookie Close-Up (IMAGE_44) (Tilted Right Overlapping) -->
+          <div
+            class="absolute -right-2 sm:right-4 bottom-0 sm:bottom-4 w-[250px] sm:w-[300px] md:w-[330px] bg-white p-3 pb-8 rounded-2xl border-[3px] border-[#241131] pop-shadow-lg rotate-6 hover:rotate-0 z-20 hover:z-30 transition-all duration-300">
+            <div
+              class="absolute -top-3 left-1/2 -translate-x-1/2 w-28 h-6 washi-tape-pink border border-[#241131] -rotate-3 z-20">
+            </div>
+            <div class="w-full aspect-square rounded-xl overflow-hidden border-2 border-[#241131] bg-[#FFF9F1]">
+              <img alt="Molten strawberry crunch stuffed cookie oozing filling" class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida/AEtjO1UcAfjBJdXMhetBieFsrBbvNnId1u5Zp4zy74yWYEe5ZvGHY2Ynm_j_x6Fxl7a1aUABfgpjwDKN_5-_vJoVH91v12mf3bhcB0BaqUP1mSu8CXQO5ap604lWfkc0wwdJk9swcNqmeIOD-UEvHwQgWW9UJAHlst7zCcR0MpQPTQow4W_-sUlZsL6O80pt9jwqyVoW36Q3wGjBXa6AHrBRGk-I8WwEvCfTV1sztKnLp2CYCg3N9gvTiChEKZw">
+            </div>
+            <div class="mt-3 px-1 flex items-center justify-between font-display">
+              <span class="text-[14px] font-black text-[#FF6FCB]">STRAWBERRY OOZE CORE</span>
+              <span
+                class="text-[11px] font-extrabold text-[#241131] bg-[#FFF9F1] px-2 py-0.5 rounded border border-[#241131]">8
+                OZ MONSTER</span>
+            </div>
+          </div>
+          <!-- Floating Y2K Badge Sticker -->
+          <div
+            class="absolute -bottom-4 left-1/4 z-30 bg-[#33DCE6] text-[#241131] border-[3px] border-[#241131] pop-shadow px-4 py-2 rounded-full font-display font-black text-[13px] uppercase rotate-[-8deg]">
+            ★ 100% HOMEMADE IN TULSA ★
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 3. FLAVOR ARCHIVE VAULT (COMMERCE-OPTIMIZED BROWSING) -->
+    <section class="w-full px-4 md:px-8 py-16 bg-[#FFF9F1] border-b-[3px] border-[#241131] relative" id="vault">
+      <div class="max-w-7xl mx-auto flex flex-col gap-10">
+        <!-- Section Header -->
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b-2 border-dashed border-[#241131]/30 pb-6">
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center gap-2">
+              <span
+                class="washi-tape-lilac px-3 py-1 font-display font-black text-[12px] text-white rounded border border-[#241131] uppercase">
+                FLAVOR ARCHIVE • VOL. 2026
+              </span>
+              <span class="font-display font-bold text-[13px] text-[#241131]">SCRATCH BAKED WEEKLY</span>
+            </div>
+            <h2 class="font-display font-black text-[38px] md:text-[50px] text-[#241131] leading-tight">
+              The Sweet Archive Vault 🍪
+            </h2>
+          </div>
+          <div class="flex items-center gap-3"><a
+              class="inline-flex items-center gap-1 bg-white hover:bg-[#fae8ff] px-3.5 py-1.5 rounded-full border-2 border-[#241131] pop-shadow font-display text-[13px] font-bold text-[#B368F0] hover:text-[#FF6FCB] transition-all cursor-pointer"
+              data-path="flavor-menu" href="#vault" title="Explore Full Flavor Menu"><span class="">8OZ MONSTER COOKIES
+                · $6.50 EA</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a></div>
+        </div>
+        <!-- Category Filter Chips -->
+        <div class="flex flex-wrap items-center gap-2 select-none" id="filter-chips">
+          <button
+            class="filter-chip active bg-[#FF6FCB] text-[#241131] border-2 border-[#241131] px-4 py-1.5 rounded-full font-display font-black text-[13px] pop-shadow"
+            onclick="filterFlavors('all', this)">
+            All Flavors (8)
+          </button>
+          <button
+            class="filter-chip bg-white hover:bg-[#fae8ff] text-[#241131] border-2 border-[#241131] px-4 py-1.5 rounded-full font-display font-bold text-[13px]"
+            onclick="filterFlavors('bestseller', this)">
+            🌟 Bestsellers
+          </button>
+          <button
+            class="filter-chip bg-white hover:bg-[#fae8ff] text-[#241131] border-2 border-[#241131] px-4 py-1.5 rounded-full font-display font-bold text-[13px]"
+            onclick="filterFlavors('chocolate', this)">
+            🍫 Chocolate &amp; Nutella
+          </button>
+          <button
+            class="filter-chip bg-white hover:bg-[#fae8ff] text-[#241131] border-2 border-[#241131] px-4 py-1.5 rounded-full font-display font-bold text-[13px]"
+            onclick="filterFlavors('fruit', this)">
+            🍓 Fruit &amp; Cream
+          </button>
+          <button
+            class="filter-chip bg-white hover:bg-[#fae8ff] text-[#241131] border-2 border-[#241131] px-4 py-1.5 rounded-full font-display font-bold text-[13px]"
+            onclick="filterFlavors('nut-free', this)">
+            🌾 Nut-Free
+          </button>
+        </div>
+        <!-- Product Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7" id="flavor-grid">
+          <!-- Cookie Card 1: Strawberry Crunch -->
+          <div
+            class="cookie-card bg-white rounded-2xl p-4 border-[3px] border-[#241131] pop-shadow relative flex flex-col justify-between rotate-[-1deg] hover:rotate-0 hover:-translate-y-2 transition-all"
+            data-id="strawberry-crunch"
+            data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAyGqBTchbkZRA6Xs5waa8SH2Dq7JGKpG9e7MaH_tNrLwTTRXkSk40oehPaJQ5QpQ0tlfLKpGUdEps6XHfahfhqohk9Yqs5nIbH4jzb-FmLUmnNnzHF04cH0AZAAEDUWQSCgx86ThQe59dfzI2B91HRZa2zJlWbvTP0uwfxvgz_k9QgVJT6OtOcL2cedhzceYDDK8aadMtPBNEgfcuHnI6f9k5G7lMbUMnL8Xj-adW-yRi9nKKoC22LXoM6IlgnscxTZA"
+            data-name="Strawberry Crunch" data-price="6.50" data-tags="bestseller fruit nut-free">
+            <div class="absolute -top-3 right-6 w-20 h-5 washi-tape-pink border border-[#241131] rotate-3"></div>
+            <div>
+              <div class="w-full aspect-square rounded-xl overflow-hidden border-2 border-[#241131] mb-3 bg-[#fae8ff]">
+                <img alt="Strawberry Crunch cookie"
+                  class="w-full h-48 object-cover rounded-xl hover:scale-105 transition-transform duration-300"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr8VIRSFxjmRy7JjVdVcPn1uX_DX2F2P8qxJGdG69AybTMs4rVu6KEYke15rBHSUvWVRzDMzcpWBJNpP6kzo5pGHm-irOTG-rbMNngidK37C7UbHCoRVEHr8k2CVrbzkxXYBJufrLK2Ae5MmihYbTZHAnNET6zkrkKmYTn92WGw11_96Bi9-wv6569vapLNHAkWcaEkenDgAwhciUxBKJQEPxbswL6NmP0pMob5uD-9p2OLTThoxeMaOpEOiFIohramQ">
+              </div>
+              <div class="flex items-center justify-between mb-1 font-display">
+                <span class="text-[17px] font-black text-[#241131]">Strawberry Crunch</span>
+                <span class="text-[16px] font-black text-[#FF6FCB]">$6.50</span>
+              </div>
+              <p class="font-body text-[13px] font-bold text-[#241131]/80 leading-snug mb-3">
+                Strawberry cookie packed with scratch crumble, white icing, &amp; stuffed with a full Little Debbie
+                swiss roll.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-3">
+                <span
+                  class="bg-[#FFF9F1] border border-[#241131] text-[10px] font-extrabold px-2 py-0.5 rounded text-[#241131]">Swiss
+                  Roll Core</span>
+                <span
+                  class="bg-[#FFF9F1] border border-[#241131] text-[10px] font-extrabold px-2 py-0.5 rounded text-[#FF6FCB]">Scratch
+                  Crunch</span>
+              </div>
+            </div>
+            <div class="pt-3 border-t-2 border-dashed border-[#241131]/20 flex items-center justify-between gap-2">
+              <button
+                class="w-full bg-[#FF6FCB] hover:brightness-105 active:translate-y-0.5 text-[#241131] py-2 px-3 rounded-full border-2 border-[#241131] font-display font-black text-[13px] pop-shadow flex items-center justify-center gap-1"
+                onclick="addSingleCookie('Strawberry Crunch', 6.50, 'https://lh3.googleusercontent.com/aida-public/AB6AXuBJDJ1g82VfXe-mWBXSWvlktGM-kFw7EfYUU8wxxHErpHvhnNuBOXgr9QwMB5T6hZQyP9nu0k2dPI4_KUAcbT_AG_K5uXRc6ZaGW-jRWp_D3FR2_u2MbffrYIgbv2tMBGF4b0B2SyE5cJwKaoisltG95aYw9RyOg9tBcSCSySVq2BDyv3I4qxltb_RytwY8xHJ-mURdNCgCTZJtqDX0SGnWfpL9MzFkW1NErNEvl-bzrY2U5v72bIiznLf6zrtBZTRO6w')">
+                <span class="">+ Add to 6-Pack</span>
+              </button>
+            </div>
+          </div>
+          <!-- Cookie Card 2: Velvet Puddyn -->
+          <div
+            class="cookie-card bg-white rounded-2xl p-4 border-[3px] border-[#241131] pop-shadow relative flex flex-col justify-between rotate-[1.5deg] hover:rotate-0 hover:-translate-y-2 transition-all"
+            data-id="velvet-puddyn"
+            data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuBOObv6LlF4F-nnVyllJnE1CLIg7DNAXKBMg6dcIbX_VJduAwtQVSvSStWYzCqT87Kn8EzCSNNpoyXiQhM_nvOTlEkE_yc75gLu-gqfYJG5H5qmABgBumFq1IvEM_4agwK_Lf-1-t860SXEBKBEoA8wVJ-UVlitdIuKb7EqPO-6Sa0ZX6gcgzxxmU7oG5wCxSFmtLGLCT23CHTuMC156qoHO2kJjMbApuK_rzkoIDfb0Shr61fZVsM5-qZMjKG0WqnVFw"
+            data-name="Velvet Puddyn" data-price="6.50" data-tags="bestseller chocolate fruit">
+            <div class="absolute -top-3 left-6 w-20 h-5 washi-tape-lilac border border-[#241131] -rotate-2"></div>
+            <div>
+              <div class="w-full aspect-square rounded-xl overflow-hidden border-2 border-[#241131] mb-3 bg-[#fae8ff]">
+                <img alt="Velvet Puddyn cookie"
+                  class="w-full h-48 object-cover rounded-xl hover:scale-105 transition-transform duration-300"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzn5laKGjq4kanXdubuys3ZmL5s806m6FYWJqhAtiBWeE0_9GQgq2lIXV_DIbkGYYIWNtocL9RGiuIa_c99do22RSLm_tH6yTBA60RY711l4sk0f2-bz-8m8OYInt_d76ikTNq0YJWYAuGKJMBr-gN4av40vwJJts6YQJhWFZQBVlQQ2ADUde_-w0Dfmh9KvH_-usPTunHKLgJDg3VWg0sPZ1j49QykHeVcAamqfEJvrQPliw0b_BFJwZcA4gq53WTPw">
+              </div>
+              <div class="flex items-center justify-between mb-1 font-display">
+                <span class="text-[17px] font-black text-[#241131]">Velvet Puddyn</span>
+                <span class="text-[16px] font-black text-[#B368F0]">$6.50</span>
+              </div>
+              <p class="font-body text-[13px] font-bold text-[#241131]/80 leading-snug mb-3">
+                Deep cocoa red velvet cookie filled with silky scratch banana pudding, vanilla wafer cookie crumble
+                &amp; cream cheese.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-3">
+                <span
+                  class="bg-[#FFF9F1] border border-[#241131] text-[10px] font-extrabold px-2 py-0.5 rounded text-[#241131]">Banana
+                  Pudding</span>
+                <span
+                  class="bg-[#FFF9F1] border border-[#241131] text-[10px] font-extrabold px-2 py-0.5 rounded text-[#B368F0]">Nilla
+                  Wafers</span>
+              </div>
+            </div>
+            <div class="pt-3 border-t-2 border-dashed border-[#241131]/20 flex items-center justify-between gap-2">
+              <button
+                class="w-full bg-[#FF6FCB] hover:brightness-105 active:translate-y-0.5 text-[#241131] py-2 px-3 rounded-full border-2 border-[#241131] font-display font-black text-[13px] pop-shadow flex items-center justify-center gap-1"
+                onclick="addSingleCookie('Velvet Puddyn', 6.50, 'https://lh3.googleusercontent.com/aida-public/AB6AXuDlb1AcV70A_nSifH2IxtJmmL5ONUVbDWhDaaV8ZAVgLNKvziVfMZjhUa8zv8n60AKkw3T3uZpr7bfKmIM4k-g3jbOmuXw4l8oW6RYCHuEIlguxacECWIn1XJOV8ZdHOz2wmbcH6hiAffDo7S3e1sKk876B4IJle6j-tB8j1OVyegcc8RJu4NWHT2YWBdNo56EbZQ4u8lOiMo6dtHcwg83z2WqFHMtmnSWVvRGPgs_K5xEGsFrTokBQ_2NmL6mJnDn_Cg')">
+                <span class="">+ Add to 6-Pack</span>
+              </button>
+            </div>
+          </div>
+          <!-- Cookie Card 3: The Dad Bod -->
+          <div
+            class="cookie-card bg-white rounded-2xl p-4 border-[3px] border-[#241131] pop-shadow relative flex flex-col justify-between rotate-[-1.5deg] hover:rotate-0 hover:-translate-y-2 transition-all"
+            data-id="dad-bod"
+            data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuCSysjUUQWBPmfD6eLkWSv9aa6_ImyzfliU-YkqZNk2vPZxTon4_RHPrEDnpWe6K-OomnR210Q6OjqIQhqyGZvD_vH5WL0duae_1jx-9ftReMqeC_So9mrrjM1dRMgpS7QJAi4Q_RowUgcamLVaXgchAWBbLiQm8qgYmVQfgvJbQh4f6wJ85c0TvyFTI5jyliO0NIaRrlU-mH56b8FB-AuNVlxtES0KpHnXgW_LNLvn-C4cwLwV37cxT9277x5fFJPgzg"
+            data-name="The Dad Bod" data-price="6.50" data-tags="bestseller chocolate">
+            <div class="absolute -top-3 right-6 w-20 h-5 washi-tape-cyan border border-[#241131] rotate-1"></div>
+            <div>
+              <div class="w-full aspect-square rounded-xl overflow-hidden border-2 border-[#241131] mb-3 bg-[#FFF9F1]">
+                <img alt="The Dad Bod cookie"
+                  class="w-full h-48 object-cover rounded-xl hover:scale-105 transition-transform duration-300"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOUwpttFVhA5L-DeyoZ1DzxrKbJN1uy8EqabSlbrB0iXDSlJYp_19KlFQRN7j7zTrdVAnObLN8ba9DWHiTfwx-ts28fjHvRlPt1ivUhmaim5p0cT_i2cU4h0Gl53rG-_6qMDfKa5tq-v9y-KtDwt_PqWH8ZRdjdftQVr_zz9hD9RQjzr6LZ6teJwqAb5l6g_uab6bgZ3cxKCNDzuFakkS3Ui3iKXRueqAF16U3_4kVblzUhZHeBtpxD0I4EjxMmWCHGw">
+              </div>
+              <div class="flex items-center justify-between mb-1 font-display">
+                <span class="text-[17px] font-black text-[#241131]">The Dad Bod</span>
+                <span class="text-[16px] font-black text-[#33DCE6]">$6.50</span>
+              </div>
+              <p class="font-body text-[13px] font-bold text-[#241131]/80 leading-snug mb-3">
+                Classic chocolate chip dough wrapped around a molten lake of hazelnut Nutella with brownie crumb crumble
+                top.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-3">
+                <span
+                  class="bg-[#FFF9F1] border border-[#241131] text-[10px] font-extrabold px-2 py-0.5 rounded text-[#241131]">Molten
+                  Nutella</span>
+                <span
+                  class="bg-[#FFF9F1] border border-[#241131] text-[10px] font-extrabold px-2 py-0.5 rounded text-[#33DCE6]">Brownie
+                  Crumb</span>
+              </div>
+            </div>
+            <div class="pt-3 border-t-2 border-dashed border-[#241131]/20 flex items-center justify-between gap-2">
+              <button
+                class="w-full bg-[#FF6FCB] hover:brightness-105 active:translate-y-0.5 text-[#241131] py-2 px-3 rounded-full border-2 border-[#241131] font-display font-black text-[13px] pop-shadow flex items-center justify-center gap-1"
+                onclick="addSingleCookie('The Dad Bod', 6.50, 'https://lh3.googleusercontent.com/aida-public/AB6AXuArJdq9-GuMxkl9gLG8gsPnAJHpCyiVj1ZG2TAyEjn2F4m39fGPG-R8BhYxe9DnL6tNR2XdjgSOLyG9YbvtXLqLMvOv_61ytsLObgGbkH2vCCSrb7HVKomI2vsjTS5G7-BTW2GqBafp8dk3Vu13iUe8O77niJ0__WVsXaRiM4RgILSx6EKoHIpRCP-NaMC_h4JIPZ4KSYtwi3neUPbue1xviRgDZw0bhKflDLeRm6as0iDmEh_iINKVf__k5v8p2iUZqw')">
+                <span class="">+ Add to 6-Pack</span>
+              </button>
+            </div>
+          </div>
+          <!-- Cookie Card 4: Cookies 'n Creme -->
+          <div
+            class="cookie-card bg-white rounded-2xl p-4 border-[3px] border-[#241131] pop-shadow relative flex flex-col justify-between rotate-[1deg] hover:rotate-0 hover:-translate-y-2 transition-all"
+            data-id="cookies-n-creme"
+            data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuCqvEm3MqmQHHrb1X6Cekfpm6yXRp1TMM3GlMbRzRyh2JK_9fleWpGDVmxRHbjt6LQ3jY4UVXlUZB-xkn5ismezn_SyX8tOcER5ly6EnbmcEJkpkEhvsXVnSiuvpIzTMY6F6xJYP2V3ZQhGaUCGWHP4apI7PzdNTlhSG8SMC2k2zRPMjqjHLwiTTzicUsVUAhPaYy-_VUzzenggIRBVAxj8cWE8WyfLiaBZR0Cvufo6bgFg3nXMNtEEnumMtPfMFh6eKw"
+            data-name="Cookies 'n Creme" data-price="6.50" data-tags="chocolate nut-free">
+            <div class="absolute -top-3 left-6 w-20 h-5 washi-tape-pink border border-[#241131] -rotate-3"></div>
+            <div>
+              <div class="w-full aspect-square rounded-xl overflow-hidden border-2 border-[#241131] mb-3 bg-[#fae8ff]">
+                <img alt="Cookies 'n Creme cookie"
+                  class="w-full h-48 object-cover rounded-xl hover:scale-105 transition-transform duration-300"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOPNhkYTc9IFDhbdZ0FlXpsM-Z78JfhpHrsFXXR6chuT9wVwRSYzZA4CIm8dMXF0eNGFqIuKwzN0vcbMF7TbByKhDe54-Ke_DLglm9z77jOdtiwWg76Mreu2WObQjZbC-dVafIlD15KT95UiwKEu3TVT-tWd2q025pfZSsrvZkz0vrYBwmfUGeLw-qDCnZhFsAThkrUPrEg6HHS6M1EkG-JPVs3OOIQsx4UuWWXyf7xoYw7-KpMeaI-sotw-WUCtcScw">
+              </div>
+              <div class="flex items-center justify-between mb-1 font-display">
+                <span class="text-[17px] font-black text-[#241131]">Cookies 'n Creme</span>
+                <span class="text-[16px] font-black text-[#FF6FCB]">$6.50</span>
+              </div>
+              <p class="font-body text-[13px] font-bold text-[#241131]/80 leading-snug mb-3">
+                Vanilla dough studded with crushed dark Oreos, stuffed with silky cookies &amp; cream cheesecake spread.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-3">
+                <span
+                  class="bg-[#FFF9F1] border border-[#241131] text-[10px] font-extrabold px-2 py-0.5 rounded text-[#241131]">Double
+                  Oreo</span>
+                <span
+                  class="bg-[#FFF9F1] border border-[#241131] text-[10px] font-extrabold px-2 py-0.5 rounded text-[#33DCE6]">Creme
+                  Core</span>
+              </div>
+            </div>
+            <div class="pt-3 border-t-2 border-dashed border-[#241131]/20 flex items-center justify-between gap-2">
+              <button
+                class="w-full bg-[#FF6FCB] hover:brightness-105 active:translate-y-0.5 text-[#241131] py-2 px-3 rounded-full border-2 border-[#241131] font-display font-black text-[13px] pop-shadow flex items-center justify-center gap-1"
+                onclick="addSingleCookie('Cookies \'n Creme', 6.50, 'https://lh3.googleusercontent.com/aida-public/AB6AXuD_oLVKg5bINHufS53CH8Y4D34SI3rhWDhH5w8Voo39JnLzanITjKifmh_EkCmNybcCz6mcDkJBCRvUDWc7j-y-AQqWpobbTR07WZgna9Z3q-hT7ih7o8rcYoQZcgaQXzGm3UeU1ANzf-pwW5DksS_fCtY93kXTKo24aolIbWwuj8uq05_Now8UiKk_OvAlhLLtrr4r1dcA_HHmjOrr6ex6QqwfXbSlqkUUiXokhNetwJ-XLqmY37mSf_K000X3sFY2iQ')">
+                <span class="">+ Add to 6-Pack</span>
+              </button>
+            </div>
+          </div>
+          <!-- Cookie Card 5: Birthday Magic -->
+          <div
+            class="cookie-card bg-white rounded-2xl p-4 border-[3px] border-[#241131] pop-shadow relative flex flex-col justify-between rotate-[-1deg] hover:rotate-0 hover:-translate-y-2 transition-all"
+            data-id="birthday-magic"
+            data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuDZbvHmfu4OlUGo7m2XfW4W3lwCH5G-cMVPBTYYEcp1ArZWLqASr55bEynyDrFfxmHsD_0dHQltXpdt2p-oOOE7uFgv9lxOEHtIUKn-0_sTPeWo7jwiHhYbcd4Tb653JsZBd3nsDRTME8BpCchFlYC4txgmOrGL4JP3UuQqP7b4DUBOzjaRkOkXrJ1R0YsUErG4nE1fLgfzg0MCKRAG-LhjvYnXWR8Uk-f4cxhufz-b1T5lIwz0KtA5eODY6Fvt3PugHg"
+            data-name="Birthday Magic" data-price="6.50" data-tags="bestseller nut-free">
+            <div class="absolute -top-3 right-6 w-20 h-5 washi-tape-lilac border border-[#241131] rotate-2"></div>
+            <div>
+              <div class="w-full aspect-square rounded-xl overflow-hidden border-2 border-[#241131] mb-3 bg-[#fae8ff]">
+                <img alt="Birthday Magic stuffed cookie"
+                  class="w-full h-48 object-cover rounded-xl hover:scale-105 transition-transform duration-300"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-SMMxE2BErimH6E5d2ERvnKasfD7E6v5P6QLd8jWGaAGH-M1xzWZB7C2v8agwkvv8np9Lp244dIwvD_GIidDXwzOr6vg0t_WMytz_9YWWQc7Q41OZLsFxQ_vkgGVocickt_vs4BcGJRdLU25guaLEbszaYEaVy96W4Vwc8nmzpRUPdmhuzv2N5IxbycQS2XFxzr9VN3hribzJnB138-4oyIeJuzw-INwvKRacGQ1JLkG-n5uzSr55_1Bggd17PIE4yg">
+              </div>
+              <div class="flex items-center justify-between mb-1 font-display">
+                <span class="text-[17px] font-black text-[#241131]">Birthday Magic</span>
+                <span class="text-[16px] font-black text-[#B368F0]">$6.50</span>
+              </div>
+              <p class="font-body text-[13px] font-bold text-[#241131]/80 leading-snug mb-3">
+                Celebration cake batter cookie studded with golden sprinkles, pastel candies, white chips, &amp; fluff
+                center.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-3">
+                <span
+                  class="bg-[#FFF9F1] border border-[#241131] text-[10px] font-extrabold px-2 py-0.5 rounded text-[#241131]">Marshmallow
+                  Fluff</span>
+                <span
+                  class="bg-[#FFF9F1] border border-[#241131] text-[10px] font-extrabold px-2 py-0.5 rounded text-[#B368F0]">Fairy
+                  Sprinkles</span>
+              </div>
+            </div>
+            <div class="pt-3 border-t-2 border-dashed border-[#241131]/20 flex items-center justify-between gap-2">
+              <button
+                class="w-full bg-[#FF6FCB] hover:brightness-105 active:translate-y-0.5 text-[#241131] py-2 px-3 rounded-full border-2 border-[#241131] font-display font-black text-[13px] pop-shadow flex items-center justify-center gap-1"
+                onclick="addSingleCookie('Birthday Magic', 6.50, 'https://lh3.googleusercontent.com/aida-public/AB6AXuCBKI27o3Qatocha54C1BjfiP5EWs3pz2-jIWDDjkxVWKrYDMEtoTyRUekyxMe2Dr35YrUnJ6Lef-Mbl9UbyU0bskQ-RMFBs7rcqEePI7xMnMdeZxbxO80tNbYui8PJ7kfXHMS289gqL-Sabt4PKuE0SIcfBhzeui3-rjVBAOXzmEdOLoUTnZYG3Nl4je-OVJT_f1EO-C0vzSjD5ciEaE38KhBAjItmVvtIwqOId-A2off8OsyX9AuHdBguOGuJCpBeew')">
+                <span class="">+ Add to 6-Pack</span>
+              </button>
+            </div>
+          </div>
+          <!-- Cookie Card 6: Molten Double Choc Brookie (uses IMAGE_44) -->
+          <div
+            class="cookie-card bg-white rounded-2xl p-4 border-[3px] border-[#241131] pop-shadow relative flex flex-col justify-between rotate-[1deg] hover:rotate-0 hover:-translate-y-2 transition-all"
+            data-id="brookie-blast"
+            data-img="https://lh3.googleusercontent.com/aida/AEtjO1UcAfjBJdXMhetBieFsrBbvNnId1u5Zp4zy74yWYEe5ZvGHY2Ynm_j_x6Fxl7a1aUABfgpjwDKN_5-_vJoVH91v12mf3bhcB0BaqUP1mSu8CXQO5ap604lWfkc0wwdJk9swcNqmeIOD-UEvHwQgWW9UJAHlst7zCcR0MpQPTQow4W_-sUlZsL6O80pt9jwqyVoW36Q3wGjBXa6AHrBRGk-I8WwEvCfTV1sztKnLp2CYCg3N9gvTiChEKZw"
+            data-name="Dark Brookie Blast" data-price="6.50" data-tags="chocolate nut-free">
+            <div class="absolute -top-3 left-6 w-20 h-5 washi-tape-cyan border border-[#241131] -rotate-1"></div>
+            <div>
+              <div class="w-full aspect-square rounded-xl overflow-hidden border-2 border-[#241131] mb-3 bg-[#FFF9F1]">
+                <img alt="Dark Brookie Blast"
+                  class="w-full h-48 object-cover rounded-xl hover:scale-105 transition-transform duration-300"
+                  src="https://lh3.googleusercontent.com/aida/AEtjO1UcAfjBJdXMhetBieFsrBbvNnId1u5Zp4zy74yWYEe5ZvGHY2Ynm_j_x6Fxl7a1aUABfgpjwDKN_5-_vJoVH91v12mf3bhcB0BaqUP1mSu8CXQO5ap604lWfkc0wwdJk9swcNqmeIOD-UEvHwQgWW9UJAHlst7zCcR0MpQPTQow4W_-sUlZsL6O80pt9jwqyVoW36Q3wGjBXa6AHrBRGk-I8WwEvCfTV1sztKnLp2CYCg3N9gvTiChEKZw">
+              </div>
+              <div class="flex items-center justify-between mb-1 font-display">
+                <span class="text-[17px] font-black text-[#241131]">Dark Brookie Blast</span>
+                <span class="text-[16px] font-black text-[#33DCE6]">$6.50</span>
+              </div>
+              <p class="font-body text-[13px] font-bold text-[#241131]/80 leading-snug mb-3">
+                Fudge brownie baked directly inside chocolate chip cookie dough with sea salt caramel core.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-3">
+                <span
+                  class="bg-[#FFF9F1] border border-[#241131] text-[10px] font-extrabold px-2 py-0.5 rounded text-[#241131]">Caramel
+                  Drizzle</span>
+                <span
+                  class="bg-[#FFF9F1] border border-[#241131] text-[10px] font-extrabold px-2 py-0.5 rounded text-[#FF6FCB]">Fudge
+                  Core</span>
+              </div>
+            </div>
+            <div class="pt-3 border-t-2 border-dashed border-[#241131]/20 flex items-center justify-between gap-2">
+              <button
+                class="w-full bg-[#FF6FCB] hover:brightness-105 active:translate-y-0.5 text-[#241131] py-2 px-3 rounded-full border-2 border-[#241131] font-display font-black text-[13px] pop-shadow flex items-center justify-center gap-1"
+                onclick="addSingleCookie('Dark Brookie Blast', 6.50, 'https://lh3.googleusercontent.com/aida/AEtjO1UcAfjBJdXMhetBieFsrBbvNnId1u5Zp4zy74yWYEe5ZvGHY2Ynm_j_x6Fxl7a1aUABfgpjwDKN_5-_vJoVH91v12mf3bhcB0BaqUP1mSu8CXQO5ap604lWfkc0wwdJk9swcNqmeIOD-UEvHwQgWW9UJAHlst7zCcR0MpQPTQow4W_-sUlZsL6O80pt9jwqyVoW36Q3wGjBXa6AHrBRGk-I8WwEvCfTV1sztKnLp2CYCg3N9gvTiChEKZw')">
+                <span class="">+ Add to 6-Pack</span>
+              </button>
+            </div>
+          </div>
+          <!-- Cookie Card 7: Peach Cobbler Snickerdoodle -->
+          <div
+            class="cookie-card bg-white rounded-2xl p-4 border-[3px] border-[#241131] pop-shadow relative flex flex-col justify-between rotate-[-1deg] hover:rotate-0 hover:-translate-y-2 transition-all"
+            data-id="peach-cobbler"
+            data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAsaXOL8Y348P4jXOiHlDo6yVbknVoD0mEwNVxATgMrJmFN6YB0sGbqkzTQ2le2-qlO31Q6bv4R83YwwRB5bYxAx4KWkeKBIm3LvpZ6tFL0EOH-NR2GcaKnqhTuS3CtnyAQZ3XUUTk4bS2o45MKCv4L004lPAI2PiJ8vAxb4f6sW_-quzq_tTMdqFXsR61Imd9I3MTqwxnP2AD0QX_rY4kA-vKZHqY9jW1mwAbHKyw3SS0XxX93uLT_1akat3wQGjnyeQ"
+            data-name="Peach Snickerdoodle" data-price="6.50" data-tags="fruit nut-free">
+            <div class="absolute -top-3 right-6 w-20 h-5 washi-tape-pink border border-[#241131] rotate-2"></div>
+            <div>
+              <div class="w-full aspect-square rounded-xl overflow-hidden border-2 border-[#241131] mb-3 bg-[#fae8ff]">
+                <img alt="Peach Snickerdoodle"
+                  class="w-full h-48 object-cover rounded-xl hover:scale-105 transition-transform duration-300"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhrGa_3u4-gVsnKYway6lCyEcpXnqfg8Uux7-8-VUyWszhGC6b5x_APyvkxQKFWO3KaXqO04Vg6G0LqfhW7xeAIjDKxsAZ0guumAobZ1C32GrCK-PbqdTLVIcjgH9ioShYayPzgxxqGEFBmm5KQNtHofYxIxyoLejKIt5d5JiFgbfk3FNLwPCfdb8mgd8B_jbhs0CUCzXrt-cCpCLglQ1F-eiOIIi_BIORKUr59NEUTEx2Xk7EmrUS9N5xB-ObBip8Yg">
+              </div>
+              <div class="flex items-center justify-between mb-1 font-display">
+                <span class="text-[17px] font-black text-[#241131]">Peach Snickerdoodle</span>
+                <span class="text-[16px] font-black text-[#FF6FCB]">$6.50</span>
+              </div>
+              <p class="font-body text-[13px] font-bold text-[#241131]/80 leading-snug mb-3">
+                Cinnamon sugar butter dough packed with spiced warm peach preserves &amp; toasted graham crumble.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-3">
+                <span
+                  class="bg-[#FFF9F1] border border-[#241131] text-[10px] font-extrabold px-2 py-0.5 rounded text-[#241131]">Peach
+                  Compote</span>
+                <span
+                  class="bg-[#FFF9F1] border border-[#241131] text-[10px] font-extrabold px-2 py-0.5 rounded text-[#B368F0]">Cinnamon
+                  Crust</span>
+              </div>
+            </div>
+            <div class="pt-3 border-t-2 border-dashed border-[#241131]/20 flex items-center justify-between gap-2">
+              <button
+                class="w-full bg-[#FF6FCB] hover:brightness-105 active:translate-y-0.5 text-[#241131] py-2 px-3 rounded-full border-2 border-[#241131] font-display font-black text-[13px] pop-shadow flex items-center justify-center gap-1"
+                onclick="addSingleCookie('Peach Snickerdoodle', 6.50, 'https://lh3.googleusercontent.com/aida-public/AB6AXuAbPkTPxMJwOgSfK_HHNawtYqtLGp6kqytfxZJD3C-1uCty48H_5vPu5Lme-xNcf4UOcaWXzqnOqOf-PDnkKjFP2ZcJRSR03pG883D7f_9QLlvKnYUjMPKEGWRC4sCRtS2AJtpEUcrUBnwYSGV9VcTNGjBsBgp-0kWOb8h1NVyPQ4ISoHk6OZ-QePUCMXGhhIx1AklRjoyfhphPe5X_yEEXDrOMkR1fExMipp2COJufomTF2kede3elvMlfvrAJ2wjNzw')">
+                <span class="">+ Add to 6-Pack</span>
+              </button>
+            </div>
+          </div>
+          <!-- Cookie Card 8: Peanut Butter Ooze -->
+          <div
+            class="cookie-card bg-white rounded-2xl p-4 border-[3px] border-[#241131] pop-shadow relative flex flex-col justify-between rotate-[1deg] hover:rotate-0 hover:-translate-y-2 transition-all"
+            data-id="peanut-butter-ooze"
+            data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuDx6gE8Z7a0yewPYI-3gLjAibntHERNDAbJZa2OXn9bOCje1RiCDa_hh6Ib1vQIIX40Ryh-g7m_Bd7UJXdbnqVej69Hd72MoozQVkw--Oi7eMGdTFG4HtLnLhTSGV_zVPWgHJA_kteuQJJ6XdB7dKtG1qRm4KgxNoyGckcrnC7zNPmRCCuzApvez8PWzXFWyXPViMiGHxwXQsT4bqlvCbu1yWPUMbTSzpirFu0-ruJlu0fOZOGwQgkFK8Uiocigwz_GPw"
+            data-name="Peanut Butter Ooze" data-price="6.50" data-tags="chocolate">
+            <div class="absolute -top-3 left-6 w-20 h-5 washi-tape-lilac border border-[#241131] -rotate-2"></div>
+            <div>
+              <div class="w-full aspect-square rounded-xl overflow-hidden border-2 border-[#241131] mb-3 bg-[#FFF9F1]">
+                <img alt="Peanut Butter Ooze"
+                  class="w-full h-48 object-cover rounded-xl hover:scale-105 transition-transform duration-300"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiYzr3OeQGU_MDTabpGqxpu5EAra3WrHSOF8b-Vke1ypY2xy_QwPyqFyFs3qAiCoWyg64YPXTtTOuzCitcl6i2V2LTq0GVzpU8Jag5HuurZpY9DyEDCJ1HtDmmQim3FObDRzJl-15nq-uKPeMLuU7IJhtYQOWb1edSJwdE_XZaj66DMYeXlQXG7psNZO0JILVXMUia2LEOaTq36CswwLnMlh7FNYv7wHkbQqug0gutfb6timtMYuAinRc5GGtYrEMKiQ">
+              </div>
+              <div class="flex items-center justify-between mb-1 font-display">
+                <span class="text-[17px] font-black text-[#241131]">Peanut Butter Ooze</span>
+                <span class="text-[16px] font-black text-[#33DCE6]">$6.50</span>
+              </div>
+              <p class="font-body text-[13px] font-bold text-[#241131]/80 leading-snug mb-3">
+                Brown sugar cookie loaded with chopped peanut butter cups, topped with honey roasted nut crunch.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-3">
+                <span
+                  class="bg-[#FFF9F1] border border-[#241131] text-[10px] font-extrabold px-2 py-0.5 rounded text-[#241131]">PB
+                  Cup Core</span>
+                <span
+                  class="bg-[#FFF9F1] border border-[#241131] text-[10px] font-extrabold px-2 py-0.5 rounded text-[#33DCE6]">Molten
+                  Center</span>
+              </div>
+            </div>
+            <div class="pt-3 border-t-2 border-dashed border-[#241131]/20 flex items-center justify-between gap-2">
+              <button
+                class="w-full bg-[#FF6FCB] hover:brightness-105 active:translate-y-0.5 text-[#241131] py-2 px-3 rounded-full border-2 border-[#241131] font-display font-black text-[13px] pop-shadow flex items-center justify-center gap-1"
+                onclick="addSingleCookie('Peanut Butter Ooze', 6.50, 'https://lh3.googleusercontent.com/aida-public/AB6AXuDw6sHIAItAHUd9Zwyw-p-xY-LiDRQ82aSDKnMqV7m_9Sil6VUkMek-tt5dEmkhn768SXPaV5vJl959nHq7OOcsgfeXUtjkaW_j4zBFxtHI-buVlimXVMvoqIg4wTAASVhkZrF8mUtPAQXVrIEMQ62gYcjPWsGwjXAG_FZhAr4jJPqqeacSGlFqLa1EjA27vYAL3u1TmL9j0Flm35fPukq7iCA8-1F6foPr_ipooIrb8iwyHGc5d5fV_TMDzRtCE1Z0Tw')">
+                <span class="">+ Add to 6-Pack</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 4. THE 6-PACK SURVIVAL KIT BUILDER (INTERACTIVE BOX TRAY) -->
+    <section class="w-full px-4 md:px-8 py-14 bg-[#fae8ff] border-b-[3px] border-[#241131] relative" id="box-builder">
+      <div class="max-w-7xl mx-auto flex flex-col gap-8">
+        <!-- Box Header & Controls -->
+        <div
+          class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 border-b-2 border-dashed border-[#241131]/30 pb-6">
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center gap-2">
+              <span
+                class="washi-tape-pink text-[#241131] px-3.5 py-1 rounded font-display font-black text-[12px] uppercase border border-[#241131]">
+                BUNDLE &amp; SAVE $9.00
+              </span>
+              <span class="font-display font-black text-[13px] text-[#B368F0]">✦ INTERACTIVE BOX TRAY</span>
+            </div>
+            <h2 class="font-display font-black text-[34px] md:text-[46px] text-[#241131] leading-tight">
+              The 6-Pack Survival Kit Builder 📦
+            </h2>
+            <p class="font-body text-[16px] font-bold text-[#241131]/80 max-w-2xl">
+              Pick any 6 flavors below. When filled, your box automatically locks in at <strong>$30.00 flat</strong>
+              (instead of $39.00 ala carte).
+            </p>
+          </div>
+          <!-- Quick actions -->
+          <div class="flex flex-wrap items-center gap-3">
+            <button
+              class="bg-[#33DCE6] hover:brightness-105 active:translate-y-0.5 text-[#241131] font-display font-black text-[13px] px-4 py-2 rounded-full border-2 border-[#241131] pop-shadow transition-all flex items-center gap-1.5"
+              onclick="autoPackBestsellers()">
+              <span class="">⚡ Auto-Pack Bestsellers</span>
+            </button>
+            <button
+              class="bg-white hover:bg-red-50 text-[#241131] font-display font-bold text-[13px] px-4 py-2 rounded-full border-2 border-[#241131] pop-shadow transition-all"
+              onclick="resetBox()">
+              Reset Box ↺
+            </button>
+          </div>
+        </div>
+        <!-- Live Progress Bar -->
+        <div class="bg-white p-4 rounded-2xl border-[3px] border-[#241131] pop-shadow">
+          <div class="flex items-center justify-between mb-2 font-display text-[14px] font-black">
+            <span id="box-progress-text" class="">0 / 6 Filled — Add 6 to unlock $30 bundle pricing</span>
+            <span class="bg-[#FF6FCB] text-white text-[11px] px-3 py-0.5 rounded-full border border-[#241131]"
+              id="box-status-pill">Need 6 Cookies</span>
+          </div>
+          <div class="w-full bg-[#fae8ff] h-4 rounded-full border-2 border-[#241131] overflow-hidden p-0.5">
+            <div class="bg-[#33DCE6] h-full rounded-full transition-all duration-300" id="progress-bar-fill"
+              style="width: 0%;"></div>
+          </div>
+        </div>
+        <!-- 6 Visual Polaroid Slot Cards -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4" id="slots-container">
+          <!-- Slot 01 -->
+          <div
+            class="slot-card bg-white p-2.5 pb-4 rounded-2xl border-2 border-dashed border-[#241131]/60 flex flex-col items-center justify-center min-h-[180px] text-center relative transition-all"
+            data-slot="0">
+            <div
+              class="w-full aspect-square rounded-xl bg-[#FFF9F1] border-2 border-dashed border-[#241131]/40 flex flex-col items-center justify-center p-2 mb-2">
+              <span class="material-symbols-outlined text-[28px] text-[#241131]/40">cookie</span>
+              <span class="font-display font-black text-[12px] text-[#241131]/60 mt-1">+ Select Flavor</span>
+            </div>
+            <span class="font-display font-bold text-[11px] text-[#241131]">Slot 01 (Empty)</span>
+          </div>
+          <!-- Slot 02 -->
+          <div
+            class="slot-card bg-white p-2.5 pb-4 rounded-2xl border-2 border-dashed border-[#241131]/60 flex flex-col items-center justify-center min-h-[180px] text-center relative transition-all"
+            data-slot="1">
+            <div
+              class="w-full aspect-square rounded-xl bg-[#FFF9F1] border-2 border-dashed border-[#241131]/40 flex flex-col items-center justify-center p-2 mb-2">
+              <span class="material-symbols-outlined text-[28px] text-[#241131]/40">cookie</span>
+              <span class="font-display font-black text-[12px] text-[#241131]/60 mt-1">+ Select Flavor</span>
+            </div>
+            <span class="font-display font-bold text-[11px] text-[#241131]">Slot 02 (Empty)</span>
+          </div>
+          <!-- Slot 03 -->
+          <div
+            class="slot-card bg-white p-2.5 pb-4 rounded-2xl border-2 border-dashed border-[#241131]/60 flex flex-col items-center justify-center min-h-[180px] text-center relative transition-all"
+            data-slot="2">
+            <div
+              class="w-full aspect-square rounded-xl bg-[#FFF9F1] border-2 border-dashed border-[#241131]/40 flex flex-col items-center justify-center p-2 mb-2">
+              <span class="material-symbols-outlined text-[28px] text-[#241131]/40">cookie</span>
+              <span class="font-display font-black text-[12px] text-[#241131]/60 mt-1">+ Select Flavor</span>
+            </div>
+            <span class="font-display font-bold text-[11px] text-[#241131]">Slot 03 (Empty)</span>
+          </div>
+          <!-- Slot 04 -->
+          <div
+            class="slot-card bg-white p-2.5 pb-4 rounded-2xl border-2 border-dashed border-[#241131]/60 flex flex-col items-center justify-center min-h-[180px] text-center relative transition-all"
+            data-slot="3">
+            <div
+              class="w-full aspect-square rounded-xl bg-[#FFF9F1] border-2 border-dashed border-[#241131]/40 flex flex-col items-center justify-center p-2 mb-2">
+              <span class="material-symbols-outlined text-[28px] text-[#241131]/40">cookie</span>
+              <span class="font-display font-black text-[12px] text-[#241131]/60 mt-1">+ Select Flavor</span>
+            </div>
+            <span class="font-display font-bold text-[11px] text-[#241131]">Slot 04 (Empty)</span>
+          </div>
+          <!-- Slot 05 -->
+          <div
+            class="slot-card bg-white p-2.5 pb-4 rounded-2xl border-2 border-dashed border-[#241131]/60 flex flex-col items-center justify-center min-h-[180px] text-center relative transition-all"
+            data-slot="4">
+            <div
+              class="w-full aspect-square rounded-xl bg-[#FFF9F1] border-2 border-dashed border-[#241131]/40 flex flex-col items-center justify-center p-2 mb-2">
+              <span class="material-symbols-outlined text-[28px] text-[#241131]/40">cookie</span>
+              <span class="font-display font-black text-[12px] text-[#241131]/60 mt-1">+ Select Flavor</span>
+            </div>
+            <span class="font-display font-bold text-[11px] text-[#241131]">Slot 05 (Empty)</span>
+          </div>
+          <!-- Slot 06 -->
+          <div
+            class="slot-card bg-white p-2.5 pb-4 rounded-2xl border-2 border-dashed border-[#241131]/60 flex flex-col items-center justify-center min-h-[180px] text-center relative transition-all"
+            data-slot="5">
+            <div
+              class="w-full aspect-square rounded-xl bg-[#FFF9F1] border-2 border-dashed border-[#241131]/40 flex flex-col items-center justify-center p-2 mb-2">
+              <span class="material-symbols-outlined text-[28px] text-[#241131]/40">cookie</span>
+              <span class="font-display font-black text-[12px] text-[#241131]/60 mt-1">+ Select Flavor</span>
+            </div>
+            <span class="font-display font-bold text-[11px] text-[#241131]">Slot 06 (Empty)</span>
+          </div>
+        </div>
+        <!-- Pricing Summary Bar & Fast Checkout Call -->
+        <div
+          class="bg-white p-5 rounded-3xl border-[3px] border-[#241131] pop-shadow flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <div
+              class="w-12 h-12 rounded-2xl bg-[#FF6FCB] text-[#241131] flex items-center justify-center font-display font-black text-[22px] border-2 border-[#241131]">
+              🎁
+            </div>
+            <div>
+              <div class="font-display font-black text-[18px] text-[#241131]">
+                Survival Kit Total: <span class="text-[#FF6FCB]" id="builder-price-display">$0.00</span>
+              </div>
+              <div class="font-body text-[13px] font-bold text-[#241131]/70" id="builder-savings-note">Fill all 6 slots
+                to trigger $30 special package pricing ($9 savings).</div>
+            </div>
+          </div>
+          <a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 font-display text-[15px] font-black text-[#241131] bg-[#33DCE6] opacity-70 hover:opacity-100 px-7 py-3 rounded-full border-[2.5px] border-[#241131] pop-shadow transition-all"
+            href="#checkout" id="builder-checkout-btn">
+            <span class="">Lock In Box &amp; Checkout →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- 5. CRUMBOLOGY (RADICAL ANATOMY COLLAGE) -->
+    <section class="w-full px-4 md:px-8 py-16 bg-[#fae8ff] border-b-[3px] border-[#241131] relative overflow-hidden">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Left side: Diagram & Stickers -->
+        <div class="lg:col-span-6 flex flex-col items-start gap-4">
+          <span
+            class="bg-[#33DCE6] text-[#241131] font-display font-black text-[13px] px-4 py-1 rounded-full border-2 border-[#241131] uppercase pop-shadow -rotate-2">
+            CRUMBOLOGY 101: WHAT'S INSIDE?
+          </span>
+          <h2 class="font-display font-black text-[38px] md:text-[50px] text-[#241131] leading-tight">
+            Every layer has an attitude problem.
+          </h2>
+          <p class="font-body text-[17px] font-bold text-[#241131]/80 leading-relaxed">
+            We don't do boring cookies. Each batch is weighed to monster proportions, hand-stuffed with whole snacks,
+            chilled for 24 slow hours, and baked until the edge is crisp and the center is a lava flow.
+          </p>
+          <!-- Doodle Feature Badges List -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full pt-2">
+            <div class="bg-white p-3 rounded-xl border-2 border-[#241131] pop-shadow flex items-center gap-3">
+              <span class="text-[24px]">🍩</span>
+              <div>
+                <div class="font-display font-bold text-[14px]">Whole Swiss Rolls</div>
+                <div class="text-[12px] text-[#241131]/70 font-semibold">Tucked straight inside dough</div>
+              </div>
+            </div>
+            <div class="bg-white p-3 rounded-xl border-2 border-[#241131] pop-shadow flex items-center gap-3">
+              <span class="text-[24px]">🌰</span>
+              <div>
+                <div class="font-display font-bold text-[14px]">Lava Nutella Cores</div>
+                <div class="text-[12px] text-[#241131]/70 font-semibold">Hot &amp; gooey in every bite</div>
+              </div>
+            </div>
+            <div class="bg-white p-3 rounded-xl border-2 border-[#241131] pop-shadow flex items-center gap-3">
+              <span class="text-[24px]">🍌</span>
+              <div>
+                <div class="font-display font-bold text-[14px]">Scratch Banana Pudding</div>
+                <div class="text-[12px] text-[#241131]/70 font-semibold">Real vanilla wafers folded in</div>
+              </div>
+            </div>
+            <div class="bg-white p-3 rounded-xl border-2 border-[#241131] pop-shadow flex items-center gap-3">
+              <span class="text-[24px]">✨</span>
+              <div>
+                <div class="font-display font-bold text-[14px]">Pastel Fairy Crunch</div>
+                <div class="text-[12px] text-[#241131]/70 font-semibold">Sparkles, crumble &amp; icing</div>
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 flex flex-wrap gap-4">
+            <a class="inline-flex items-center gap-2 font-display text-[16px] font-black text-[#241131] bg-[#FF6FCB] px-8 py-3.5 rounded-full border-[3px] border-[#241131] pop-shadow-lg hover:-translate-y-1 transition-all"
+              href="#box-builder">
+              BUILD A 6-PACK SURVIVAL KIT ($30) ✦
+            </a>
+          </div>
+        </div>
+        <!-- Right side: Cross section Stack in Framed Polaroid Album -->
+        <div class="lg:col-span-6 flex justify-center">
+          <div
+            class="bg-white p-4 pb-6 rounded-3xl border-[3px] border-[#241131] pop-shadow-lg rotate-2 max-w-md w-full relative">
+            <div
+              class="absolute -top-4 left-1/2 -translate-x-1/2 w-32 h-6 washi-tape-cyan border border-[#241131] -rotate-1">
+            </div>
+            <div class="w-full aspect-[4/5] rounded-2xl overflow-hidden border-2 border-[#241131] bg-[#FFF9F1]">
+              <img alt="Real cross-section layers photographed in bakery studio" class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsPvjsuCEsmQEKdmVCDNdx09Aw8V6MJKI_TkHkmakIbE7PuFviHbfSRR6r0lEzco-0k_CwxS7c4oy-AHcu3kUdhyyk-ERlUq3GdYMeD5Yu05XXAhAXEeGg3pK1L0gi7afVejSdeuJy3l0a1dplP6iSsoN2E8Rkg2fcbNuavC6QJgE2ELI4p9NSYJ2z4zTZU0Oj2n5EWwm1KEJYJAplktJ33hcRZVprOEHe7JMrN0Lf_ZtxyaIGLC0BZ-LkNaZG-OACsA">
+            </div>
+            <div
+              class="mt-3 text-center font-display font-extrabold text-[13px] text-[#241131] uppercase tracking-wider">
+              ★ Real Anatomy Layers: Chonk Level 1000 ★
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 6. DOWNTOWN FIELD GUIDE (PURPLE TENT SCRAPBOOK) -->
+    <section class="w-full px-4 md:px-8 py-16 bg-[#FFF9F1] border-b-[3px] border-[#241131] relative" id="tent">
+      <div class="max-w-7xl mx-auto flex flex-col gap-10">
+        <!-- Field Guide Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center gap-2">
+              <span
+                class="washi-tape-pink px-3 py-1 font-display font-black text-[12px] text-[#241131] rounded border border-[#241131] uppercase -rotate-1">
+                FIELD GUIDE • TULSA OK
+              </span>
+              <span class="font-display font-bold text-[13px] text-[#B368F0]">POP-UP HQ</span>
+            </div>
+            <h2 class="font-display font-black text-[38px] md:text-[50px] text-[#241131] leading-tight">
+              Come Hang at the Purple Tent! 🎪
+            </h2>
+          </div>
+          <div class="flex flex-wrap items-center gap-3">
+            <a class="bg-white hover:bg-[#fae8ff] px-4 py-2 rounded-full border-2 border-[#241131] pop-shadow font-display font-bold text-[13px] text-[#241131] flex items-center gap-2 cursor-pointer transition-all"
+              data-path="find-us-and-order" href="#checkout" title="Santa Fe Square Market Details"><span
+                class="material-symbols-outlined text-[18px] text-[#FF6FCB]">location_on</span><span class="">Santa Fe
+                Square Downtown</span></a>
+            <div
+              class="bg-[#33DCE6] px-4 py-2 rounded-full border-2 border-[#241131] pop-shadow font-display font-bold text-[13px] text-[#241131] flex items-center gap-2">
+              <span class="material-symbols-outlined text-[18px]">schedule</span>
+              Wednesdays 4:30 – 7:30 PM
+            </div>
+          </div>
+        </div>
+        <!-- Scrapbook Collage: Founders, Booth, and Chalk Board Art -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+          <!-- Polaroid 1: Founders smiling at booth (IMAGE_36) -->
+          <div
+            class="md:col-span-4 bg-white p-3 pb-6 rounded-2xl border-[3px] border-[#241131] pop-shadow-lg rotate-[-2deg] hover:rotate-0 transition-transform">
+            <div
+              class="absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-5 washi-tape-lilac border border-[#241131] rotate-1">
+            </div>
+            <div class="w-full aspect-square rounded-xl overflow-hidden border-2 border-[#241131] bg-[#FFF9F1]">
+              <img alt="Sweet Cheeks founders smiling under the purple market tent in Tulsa"
+                class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2vNx8fwyHugapG8f4c9_RrtIkUzk5YTPkUEYrGlTU0YUZkaJSHmAjL9vzTXrHJ6vEip-rvSa2AP5TsCTlgUe_HDV47wgIrQP1sfXE__Ecd7dfdzBkXMnwoLWGQhZFHaYiPJ5fyP6eJluYD3Lf7kL1-eUvkBNuV5h6qokBWjL_AZM7QsVzjCNR7CnZsF5RGpnqnHoWjnsGoPwbr7b75lbjfQAzgFiC6Ia4CLqooEmidJzcCle_OvRPH9IhX39cGvg8AQ">
+            </div>
+            <div class="mt-3 px-1 font-display">
+              <div class="text-[14px] font-black text-[#241131]">MEET YOUR COOKIE DEALERS</div>
+              <div class="text-[12px] font-bold text-[#FF6FCB]">Handing out sugar smiles weekly</div>
+            </div>
+          </div>
+          <!-- Polaroid 2: Tent display booth (IMAGE_37) -->
+          <div
+            class="md:col-span-5 bg-white p-3 pb-6 rounded-2xl border-[3px] border-[#241131] pop-shadow-lg rotate-[1.5deg] hover:rotate-0 transition-transform">
+            <div
+              class="absolute -top-3 left-1/2 -translate-x-1/2 w-28 h-5 washi-tape-pink border border-[#241131] -rotate-2">
+            </div>
+            <div class="w-full aspect-[4/3] rounded-xl overflow-hidden border-2 border-[#241131] bg-[#FFF9F1]">
+              <img alt="Sweet Cheeks market booth setup with purple bunting and display stands"
+                class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVHCX3LN6-Qk2MYBCMRC1DwRrFU0IvQjChKyKluwybd-E3Vp57cK-Y3TdicF-27oK6BUGrS1OUmm5gvOd-znGslH_jwnTNjYiTx3LqNvTqo35L4N2QuzW5XsAcNG9nxfQFUERDB3tpaU_Ove6dkWSq747kbcZjubyi-hOeJWM_ptOGEmnqqn9KPNAhMfhnH2bo7VBdZpuD0xRzp4KFyDBBIrzMimhTOjEOmZBl7vsq0ULBKfl3-t-ebWJsocb2VrMJkQ">
+            </div>
+            <div class="mt-3 px-1 font-display flex items-center justify-between">
+              <div>
+                <div class="text-[14px] font-black text-[#241131]">THE PURPLE TENT LAB</div>
+                <div class="text-[12px] font-bold text-[#33DCE6]">Grab individual hot singles or 6-packs</div>
+              </div>
+              <span class="bg-[#FFF9F1] text-[11px] font-extrabold px-2 py-1 rounded border border-[#241131]">INVENTED
+                HERE</span>
+            </div>
+          </div>
+          <!-- Polaroid 3: Hand-drawn Chalk Board Art (IMAGE_29) -->
+          <div
+            class="md:col-span-3 bg-white p-3 pb-6 rounded-2xl border-[3px] border-[#241131] pop-shadow-lg rotate-[-1deg] hover:rotate-0 transition-transform">
+            <div
+              class="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-5 washi-tape-cyan border border-[#241131] rotate-2">
+            </div>
+            <div class="w-full aspect-[3/4] rounded-xl overflow-hidden border-2 border-[#241131] bg-[#241131]">
+              <img alt="Sweet Cheeks hand-drawn mermaid chalk menu board: Whozits &amp; Whatsits Galore"
+                class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXHJLxGFYrfL9cngZZfgMypRgKBKFEtLjIIoPJk6hnaODscPIa8uh3ymjNfwUUBkY6kz6vppYch5mCoVEyOVp0iv9l-DwHOBnbFZTPVwqcWbiJen7PRI5FZrk7TngyC7cTcpL83F6NWTA0QPTBecEYzd_SooLVmVnowd8WFxCZ5HG6etkarpcBAb-4PN9jhHdbQHjVzXRfSXnn4s-FUfQUyZBglkYYmBL8esRAJPqLt3ufI3lTXSv_vN9B5fbtpDyzSA">
+            </div>
+            <div class="mt-3 px-1 font-display">
+              <div class="text-[13px] font-black text-[#241131]">WHOZITS &amp; WHATSITS!</div>
+              <div class="text-[11px] font-bold text-[#B368F0]">Authentic chalk art by founders</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 7. FAST-TRACK ORDER RESERVATION & CHECKOUT SECTION -->
+    <section class="w-full px-4 md:px-8 py-16 bg-[#FFF9F1]" id="checkout">
+      <div
+        class="max-w-4xl mx-auto bg-white rounded-3xl p-6 sm:p-10 border-[3px] border-[#241131] pop-shadow-lg relative">
+        <div
+          class="absolute -top-4 left-8 washi-tape-cyan px-4 py-1 font-display font-black text-[12px] border border-[#241131] rotate-[-2deg]">
+          FAST-TRACK RESERVATION LEDGER
+        </div>
+        <div class="flex flex-col gap-2 mb-8 mt-2">
+          <h3 class="font-display font-black text-[32px] sm:text-[40px] text-[#241131] leading-tight">
+            Lock In Your Cookie Box 💌
+          </h3>
+          <p class="font-body text-[15px] font-bold text-[#241131]/75">
+            Select how you want your cookies, give us your info, and we'll bake 'em fresh for pickup or doorstep
+            delivery!
+          </p>
+        </div>
+        <!-- Step 1: Choose Fulfillment -->
+        <div class="mb-8">
+          <label class="block font-display font-black text-[15px] text-[#241131] mb-3">
+            STEP 1: CHOOSE FULFILLMENT METHOD
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <label
+              class="fulfillment-option cursor-pointer p-4 rounded-2xl border-2 border-[#241131] pop-shadow bg-[#fae8ff] flex items-start gap-3 transition-all">
+              <input checked="" class="mt-1 text-[#FF6FCB] focus:ring-[#FF6FCB]" name="fulfillment" type="radio"
+                value="tent">
+              <div>
+                <div class="font-display font-black text-[15px] text-[#241131]">🎪 Purple Tent Pickup (FREE)</div>
+                <div class="font-body text-[13px] font-bold text-[#241131]/80 mt-0.5">Downtown Santa Fe Square · Wed
+                  4:30 – 7:30 PM</div>
+              </div>
+            </label>
+            <label
+              class="fulfillment-option cursor-pointer p-4 rounded-2xl border-2 border-[#241131] pop-shadow bg-white hover:bg-[#FFF9F1] flex items-start gap-3 transition-all">
+              <input class="mt-1 text-[#FF6FCB] focus:ring-[#FF6FCB]" name="fulfillment" type="radio" value="courier">
+              <div>
+                <div class="font-display font-black text-[15px] text-[#241131]">🚚 Tulsa Doorstep Courier (+$5)</div>
+                <div class="font-body text-[13px] font-bold text-[#241131]/80 mt-0.5">Dropped in insulated thermal
+                  pouches Wed &amp; Fri</div>
+              </div>
+            </label>
+          </div>
+        </div>
+        <!-- Step 2: Contact Info Form -->
+        <div class="mb-8">
+          <label class="block font-display font-black text-[15px] text-[#241131] mb-3">
+            STEP 2: YOUR CONTACT &amp; DELIVERY DETAILS
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block font-display text-[12px] font-bold text-[#241131] mb-1">Full Name *</label>
+              <input
+                class="w-full rounded-xl border-2 border-[#241131] px-3.5 py-2.5 font-body font-bold text-[#241131] focus:ring-[#FF6FCB] focus:border-[#FF6FCB] bg-[#FFF9F1]"
+                placeholder="Cookie Monster" type="text">
+            </div>
+            <div>
+              <label class="block font-display text-[12px] font-bold text-[#241131] mb-1">Phone (for drop text alert)
+                *</label>
+              <input
+                class="w-full rounded-xl border-2 border-[#241131] px-3.5 py-2.5 font-body font-bold text-[#241131] focus:ring-[#FF6FCB] focus:border-[#FF6FCB] bg-[#FFF9F1]"
+                placeholder="(918) 555-0199" type="tel">
+            </div>
+            <div>
+              <label class="block font-display text-[12px] font-bold text-[#241131] mb-1">Email Address *</label>
+              <input
+                class="w-full rounded-xl border-2 border-[#241131] px-3.5 py-2.5 font-body font-bold text-[#241131] focus:ring-[#FF6FCB] focus:border-[#FF6FCB] bg-[#FFF9F1]"
+                placeholder="sweet@cheeks.ok" type="email">
+            </div>
+            <div>
+              <label class="block font-display text-[12px] font-bold text-[#241131] mb-1">Tulsa Delivery Address (if
+                courier)</label>
+              <input
+                class="w-full rounded-xl border-2 border-[#241131] px-3.5 py-2.5 font-body font-bold text-[#241131] focus:ring-[#FF6FCB] focus:border-[#FF6FCB] bg-[#FFF9F1]"
+                placeholder="123 S Boston Ave, Tulsa, OK" type="text">
+            </div>
+          </div>
+        </div>
+        <!-- Step 3: Order Summary & Instant Checkout -->
+        <div class="p-5 rounded-2xl bg-[#FFF9F1] border-2 border-[#241131] mb-6">
+          <div
+            class="flex items-center justify-between font-display font-black text-[15px] border-b border-dashed border-[#241131]/30 pb-2 mb-2">
+            <span class="">YOUR ORDER SUMMARY</span>
+            <span id="checkout-item-count" class="">0 cookies in box</span>
+          </div>
+          <div class="space-y-1.5 font-body text-[13px] font-bold text-[#241131]/80 max-h-36 overflow-y-auto mb-3"
+            id="checkout-line-items">
+            <p class="italic text-[#241131]/60">Your 6-pack box is currently empty. Click 'Auto-Pack Bestsellers' or
+              pick items above!</p>
+          </div>
+          <div
+            class="flex items-center justify-between font-display font-black text-[18px] text-[#241131] pt-2 border-t-2 border-[#241131]">
+            <span class="">TOTAL DUE</span>
+            <span class="text-[#FF6FCB] text-[22px]" id="checkout-final-total">$0.00</span>
+          </div>
+        </div>
+        <button
+          class="w-full bg-[#FF6FCB] hover:brightness-105 active:translate-y-0.5 text-[#241131] py-4 rounded-full border-[3px] border-[#241131] font-display font-black text-[18px] pop-shadow-lg transition-all flex items-center justify-center gap-2"
+          onclick="handleReservationSubmit()">
+          <span class="">COMPLETE RESERVATION / APPLE PAY 🛍️</span>
+        </button>
+        <div class="mt-4 text-center font-display text-[12px] font-bold text-[#241131]/70">
+          🔒 Encrypted Checkout · Pay Online or Venmo/Cash at Tent · No Sneaky Fees
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- MOBILE COMMERCE NAVIGATION BAR -->
+  <div class="fixed bottom-0 left-0 right-0 z-40 bg-white border-t-[3px] border-[#241131] py-2 px-4 lg:hidden">
+    <nav class="flex items-center justify-around font-display font-bold text-[11px]"><a
+        class="flex flex-col items-center text-[#241131] hover:text-[#FF6FCB] cursor-pointer" data-path="home"
+        href="#home"><span class="material-symbols-outlined text-[20px] text-[#FF6FCB]">home</span><span
+          class="">Home</span></a><a
+        class="flex flex-col items-center text-[#241131] hover:text-[#33DCE6] cursor-pointer" data-path="flavor-menu"
+        href="#vault"><span class="material-symbols-outlined text-[20px] text-[#33DCE6]">cookie</span><span
+          class="">Vault</span></a><a
+        class="flex flex-col items-center text-[#241131] hover:text-[#FF6FCB] cursor-pointer" href="#box-builder"><span
+          class="material-symbols-outlined text-[20px] text-[#FF6FCB]">inventory_2</span><span
+          class="">6-Pack</span></a><a
+        class="flex flex-col items-center text-[#241131] hover:text-[#B368F0] cursor-pointer"
+        data-path="find-us-and-order" href="#checkout"><span
+          class="material-symbols-outlined text-[20px] text-[#B368F0]">shopping_bag</span><span
+          class="">Order</span></a></nav>
+  </div>
+  <!-- FOOTER -->
+  <footer class="w-full bg-[#fae8ff] border-t-[3px] border-[#241131] pt-12 pb-24 lg:pb-12" id="faq">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center justify-between mb-8">
+        <div class="md:col-span-6 flex items-center gap-4"><a class="flex items-center gap-4 group cursor-pointer"
+            data-path="home" href="#home"><img alt="Sweet Cheeks Logo"
+              class="h-16 w-auto object-contain group-hover:rotate-[-4deg] transition-transform duration-200"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdZmhb58B16HxNu0CQG82bE1eTjQvk0v1ailazylNML8MwMi74OIeQw-TJeq_rxt99XFzI4NBExOEzIXv_q4TXC5sS1njYjVm-yEURJm7JnaQ5vsCQt1C-mSfInc1vf63tCJga_qpJV01-4pPeaDeYy_Vg4K1jPAH19HJeZGt9rD82y1fxFUKyic2Wvx8N6pGNtQ06Ex7uNqUVXus9B44cOslTdjzESVQk-qYhFEMZTJvJQLiy6bA8TjVCVZknHbtsew">
+            <div class="flex flex-col"><span
+                class="font-display font-black text-[22px] text-[#241131] leading-none group-hover:text-[#FF6FCB] transition-colors">Sweet
+                Cheeks</span><span class="font-body text-[13px] font-bold text-[#241131]/70">Micro Bakery • Macro Taste
+                • Tulsa, OK</span></div>
+          </a></div>
+        <div class="md:col-span-6 flex flex-wrap md:justify-end gap-3 font-display text-[13px]">
+          <div class="flex flex-col gap-2 w-full">
+            <div class="flex flex-wrap md:justify-end gap-2 text-[13px] font-display font-bold"><a
+                class="bg-white px-3 py-1 rounded-full border-2 border-[#241131] pop-shadow text-[#241131] hover:text-[#FF6FCB] transition-all cursor-pointer"
+                data-path="home" href="#home">Home</a><a
+                class="bg-white px-3 py-1 rounded-full border-2 border-[#241131] pop-shadow text-[#241131] hover:text-[#FF6FCB] transition-all cursor-pointer"
+                data-path="flavor-menu" href="#vault">Flavor Menu</a><a
+                class="bg-white px-3 py-1 rounded-full border-2 border-[#241131] pop-shadow text-[#241131] hover:text-[#FF6FCB] transition-all cursor-pointer"
+                data-path="market-schedule" href="#tent">Market Schedule</a><a
+                class="bg-white px-3 py-1 rounded-full border-2 border-[#241131] pop-shadow text-[#241131] hover:text-[#FF6FCB] transition-all cursor-pointer"
+                data-path="find-us-and-order" href="#checkout">Find Us &amp; Order</a><a
+                class="bg-white px-3 py-1 rounded-full border-2 border-[#241131] pop-shadow text-[#241131] hover:text-[#FF6FCB] transition-all cursor-pointer"
+                data-path="contact" href="#checkout">Contact &amp; FAQ</a></div>
+            <div class="flex flex-wrap md:justify-end gap-2 pt-1"><a
+                class="inline-flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border-2 border-[#241131] pop-shadow text-[12px] font-display font-bold text-[#241131] hover:text-[#FF6FCB] transition-colors"
+                href="https://instagram.com/gimmethosesweetcheeks" rel="noopener noreferrer" target="_blank"><span
+                  class="material-symbols-outlined text-[15px]">photo_camera</span>@gimmethosesweetcheeks</a><a
+                class="inline-flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border-2 border-[#241131] pop-shadow text-[12px] font-display font-bold text-[#241131] hover:text-[#FF6FCB] transition-colors"
+                href="mailto:gimmethosesweetcheeks@gmail.com"><span
+                  class="material-symbols-outlined text-[15px]">mail</span>Fan Mail</a></div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="pt-6 border-t-2 border-dashed border-[#241131]/20 flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left font-body text-[13px] font-bold text-[#241131]/80">
+        <p class="">
+          Proudly Woman-Owned • Indigenous-Owned • Black-Owned Micro Bakery in Tulsa, OK.
+        </p>
+        <p class="">
+          © 2024 Sweet Cheeks Bakery. All cookie magic reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- INTERACTIVE COMMERCE JAVASCRIPT -->
+  <script>
+    // State
+    let boxItems = [];
+    const MAX_BOX_SLOTS = 6;
+    const SINGLE_PRICE = 6.50;
+    const BOX_BUNDLE_PRICE = 30.00;
+
+    // Pre-configured Bestseller Set
+    const bestsellersList = [
+      { name: "Strawberry Crunch", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCably9fpFeqfOLn4bIHnwuBzNGjqRX3IN_VbP1RQTl_VPo8dHaBj4L7Q5dlV8TL_qQTsT6R3YpiLaX6i_EK2NYfz1GK97anNCKobwyN5lavP8E3m_2dqGUPCvlAnCQwjKpe10LZ3-T949cct2JrrGWxIZ78QGyWYgV2UuQyPD-F-PwfE6z9LS4xTCwLjXdHcrWHgALTooTSrVwrNDYaNMln92Bz1HwB0FrdM2PE9CPZwNMW3tqJjO9Rl9PWGtxa0lXDg" },
+      { name: "The Dad Bod", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAx2YbVzVWlphux03YLFG8OrlSjMydcYB85MOVuLfOAedKk7l7MU0FkwJaR--4pBhBD50Lom35_1uZ_NiXdJy7Ptm1BYztiy4nyrRUnuZB7J6dZdy9oz7h8verklyMLdWn_YQi-VCaI86Hp2HEpmhzqpnZKlkA4fsJQTUM1Z2kKhp2qy3xJOoVpDxNXCdURWgNLFu7NBNXzrovdt73Ka3K0F_BXu5RqBhL2PCIX4LwwrliST-_mLOZxB5OEmrApZVYVNw" },
+      { name: "Velvet Puddyn", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDN9CwMqzkxnmPhIziw0IoPXD-fODeCDq7E15-eVuFb4par5h2o7JoP-m4e2ZHNEby_UY87Z571TcQKEymAwV94jEwIBySnDAaz9icn59NhTzGuz6POqX6vCDjR3IpuoWi-gZ25l49CIK91iwNXIcj0Q10COu2tJtqPOsOVX_781IffdYHy68dSYzs7GFaRM-yKAkrP0Dh3tZLu5jubcrkGnPm-SVB8MMnG980BTFYQGnknAFU-sx-TCi-i5AQby57WQA" },
+      { name: "Birthday Magic", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBNL9bWoYdrs_9WJLsm6BZzS-TXr-3RscFtssFNnOkYqEedZvCIqr0Ni2SH9J6Nlbe4pC6K05f1kc-d5RbIk-Y_WVUWKEd4mtJ40HAjRwj4st9xwHVd_C6nOiveLrDntSysdu37HhtHZYoiUfYZapHlNWQHztSLb7RhnKi2swUXC_GZlCsJJ0mpSWSvHUnYruq1vaICMraaKsdSVVZ99VQfg7eevKvBc0XUDaoWyMRL275n1FN6eOMX2ViSO4CAigE_0w" },
+      { name: "Cookies 'n Creme", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBAyvv9IdMa1_RkPf5yPlGf-UQftJ2VbFekspZswx6hRR5-oVYgGYiD19lOny922D2ER7sZlZ2w9hOhbY69O1dqQAo1rvpYr45yHwU1c6eAGVoyBJbOAjQvD8q4VPoqGPJKQiHPyvZrTIbdA45JK6Qdtw2ocjglCWmB77JRj9yaASMe-kwkujqkU-LqRcTv7BfN-IJ_bcR6XU8jC_YeJajRtfIHZ-MfRLuRFu_5Wf_QZKznciWXtffA_od_dEvl18pPmg" },
+      { name: "Dark Brookie Blast", img: "https://lh3.googleusercontent.com/aida/AEtjO1UcAfjBJdXMhetBieFsrBbvNnId1u5Zp4zy74yWYEe5ZvGHY2Ynm_j_x6Fxl7a1aUABfgpjwDKN_5-_vJoVH91v12mf3bhcB0BaqUP1mSu8CXQO5ap604lWfkc0wwdJk9swcNqmeIOD-UEvHwQgWW9UJAHlst7zCcR0MpQPTQow4W_-sUlZsL6O80pt9jwqyVoW36Q3wGjBXa6AHrBRGk-I8WwEvCfTV1sztKnLp2CYCg3N9gvTiChEKZw" }
+    ];
+
+    function updateUI() {
+      const count = boxItems.length;
+      const progressPercent = Math.min((count / MAX_BOX_SLOTS) * 100, 100);
+
+      // Update Progress bar
+      const bar = document.getElementById('progress-bar-fill');
+      if (bar) bar.style.width = progressPercent + '%';
+
+      const progressText = document.getElementById('box-progress-text');
+      const statusPill = document.getElementById('box-status-pill');
+      if (progressText && statusPill) {
+        if (count === 0) {
+          progressText.innerHTML = "0 / 6 Filled — Add 6 to unlock $30 bundle pricing";
+          statusPill.className = "bg-[#FF6FCB] text-white text-[11px] px-3 py-0.5 rounded-full border border-[#241131]";
+          statusPill.innerText = "Need 6 Cookies";
+        } else if (count < 6) {
+          progressText.innerHTML = `<strong>${count} / 6 Filled</strong> — Add ${6 - count} more for $30 box deal!`;
+          statusPill.className = "bg-[#33DCE6] text-[#241131] text-[11px] px-3 py-0.5 rounded-full border border-[#241131] font-bold";
+          statusPill.innerText = `${6 - count} slots remaining`;
+        } else {
+          progressText.innerHTML = "🎉 <strong>6 / 6 FULL! $30.00 Bundle Pricing Unlocked!</strong>";
+          statusPill.className = "bg-[#FF6FCB] text-[#241131] text-[11px] px-3 py-0.5 rounded-full border border-[#241131] font-black animate-bounce";
+          statusPill.innerText = "★ BUNDLE UNLOCKED ★";
+        }
+      }
+
+      // Pricing calculation
+      let currentPrice = 0;
+      if (count === 6) {
+        currentPrice = BOX_BUNDLE_PRICE;
+      } else {
+        currentPrice = count * SINGLE_PRICE;
+      }
+
+      const priceFormatted = `$${currentPrice.toFixed(2)}`;
+      const navCartBadge = document.getElementById('nav-cart-badge');
+      const navCheckoutBtn = document.getElementById('nav-checkout-btn');
+      const builderPriceDisplay = document.getElementById('builder-price-display');
+      const builderSavingsNote = document.getElementById('builder-savings-note');
+      const checkoutItemCount = document.getElementById('checkout-item-count');
+      const checkoutFinalTotal = document.getElementById('checkout-final-total');
+
+      if (navCartBadge) navCartBadge.innerText = `Box: ${count}/6 Slots (${priceFormatted})`;
+      if (navCheckoutBtn) navCheckoutBtn.innerText = `Proceed to Order (${priceFormatted}) 🛍️`;
+      if (builderPriceDisplay) builderPriceDisplay.innerText = priceFormatted;
+
+      if (builderSavingsNote) {
+        if (count === 6) {
+          builderSavingsNote.innerHTML = "<span class='text-emerald-600 font-bold'>★ You're saving $9.00 with the 6-pack bundle!</span>";
+        } else {
+          builderSavingsNote.innerText = "Fill all 6 slots to trigger $30 special package pricing ($9 savings).";
+        }
+      }
+
+      if (checkoutItemCount) checkoutItemCount.innerText = `${count} cookies in box`;
+      if (checkoutFinalTotal) checkoutFinalTotal.innerText = priceFormatted;
+
+      // Render Slots
+      const slotElements = document.querySelectorAll('.slot-card');
+      slotElements.forEach((el, index) => {
+        const item = boxItems[index];
+        if (item) {
+          el.className = "slot-card bg-white p-2.5 pb-4 rounded-2xl border-2 border-[#241131] pop-shadow flex flex-col items-center justify-between min-h-[180px] text-center relative transition-all";
+          el.innerHTML = `
+          <button onclick="removeSlot(${index})" class="absolute -top-2 -right-2 bg-red-500 text-white w-6 h-6 rounded-full border border-[#241131] font-bold text-xs flex items-center justify-center hover:scale-110 transition-transform">✕</button>
+          <div class="w-full aspect-square rounded-xl overflow-hidden border-2 border-[#241131] mb-2 bg-[#FFF9F1]">
+            <img src="${item.img}" alt="${item.name}" class="w-full h-full object-cover"/>
+          </div>
+          <span class="font-display font-black text-[12px] text-[#241131] leading-tight line-clamp-1">${item.name}</span>
+        `;
+        } else {
+          el.className = "slot-card bg-white p-2.5 pb-4 rounded-2xl border-2 border-dashed border-[#241131]/60 flex flex-col items-center justify-center min-h-[180px] text-center relative transition-all";
+          el.innerHTML = `
+          <div class="w-full aspect-square rounded-xl bg-[#FFF9F1] border-2 border-dashed border-[#241131]/40 flex flex-col items-center justify-center p-2 mb-2">
+            <span class="material-symbols-outlined text-[28px] text-[#241131]/40">cookie</span>
+            <span class="font-display font-black text-[12px] text-[#241131]/60 mt-1">+ Select Flavor</span>
+          </div>
+          <span class="font-display font-bold text-[11px] text-[#241131]">Slot 0${index + 1} (Empty)</span>
+        `;
+        }
+      });
+
+      // Render Line Items in Checkout Ledger
+      const lineItemsContainer = document.getElementById('checkout-line-items');
+      if (lineItemsContainer) {
+        if (boxItems.length === 0) {
+          lineItemsContainer.innerHTML = "<p class='italic text-[#241131]/60'>Your 6-pack box is currently empty. Click 'Auto-Pack Bestsellers' or pick items above!</p>";
+        } else {
+          let html = '';
+          boxItems.forEach((item, i) => {
+            html += `
+            <div class="flex items-center justify-between">
+              <span>Slot 0${i + 1}: ${item.name}</span>
+              <span class="font-mono text-xs">${count === 6 ? '$5.00 (bundle)' : '$6.50'}</span>
+            </div>
+          `;
+          });
+          if (count === 6) {
+            html += `<div class="text-xs text-pink-600 font-extrabold mt-1">✓ $9.00 Survival Kit discount applied</div>`;
+          }
+          lineItemsContainer.innerHTML = html;
+        }
+      }
+    }
+
+    function addSingleCookie(name, price, img) {
+      if (boxItems.length >= MAX_BOX_SLOTS) {
+        alert("Your 6-pack box is full! Reset or remove a cookie to swap.");
+        return;
+      }
+      boxItems.push({ name, price, img });
+      updateUI();
+    }
+
+    function removeSlot(index) {
+      boxItems.splice(index, 1);
+      updateUI();
+    }
+
+    function resetBox() {
+      boxItems = [];
+      updateUI();
+    }
+
+    function autoPackBestsellers() {
+      boxItems = [...bestsellersList];
+      updateUI();
+      const builderSec = document.getElementById('box-builder');
+      if (builderSec) {
+        builderSec.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function filterFlavors(category, btn) {
+      const chips = document.querySelectorAll('.filter-chip');
+      chips.forEach(c => {
+        c.className = "filter-chip bg-white hover:bg-[#fae8ff] text-[#241131] border-2 border-[#241131] px-4 py-1.5 rounded-full font-display font-bold text-[13px]";
+      });
+      btn.className = "filter-chip active bg-[#FF6FCB] text-[#241131] border-2 border-[#241131] px-4 py-1.5 rounded-full font-display font-black text-[13px] pop-shadow";
+
+      const cards = document.querySelectorAll('.cookie-card');
+      cards.forEach(card => {
+        const tags = card.getAttribute('data-tags') || '';
+        if (category === 'all' || tags.includes(category)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function handleReservationSubmit() {
+      if (boxItems.length === 0) {
+        alert("Please add at least 1 cookie or click 'Auto-Pack Bestsellers' before checking out!");
+        return;
+      }
+      alert(`🎉 Order Reserved! Total: ${boxItems.length === 6 ? '$30.00' : '$' + (boxItems.length * 6.50).toFixed(2)}. We will text your pickup/delivery confirmation!`);
+    }
+
+    // Initialize UI on load
+    document.addEventListener('DOMContentLoaded', () => {
+      updateUI();
+    });
+  </script>
+
+
+</body>
+
+</html>
