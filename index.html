@@ -141,13 +141,17 @@
       </a>
       <!-- Navigation Pills with Y2K Pop Borders -->
       <nav class="hidden lg:flex items-center gap-2 font-display text-[14px] font-bold"><a
+          id="nav-home"
           class="bg-[#FF6FCB] text-[#241131] px-4 py-1.5 rounded-full border-2 border-[#241131] pop-shadow hover:-translate-y-0.5 transition-all whitespace-nowrap cursor-pointer"
           data-path="home" href="#home">Home ✦</a><a
+          id="nav-vault"
           class="bg-white hover:bg-[#fae8ff] text-[#241131] px-3.5 py-1.5 rounded-full border-2 border-[#241131] hover:-translate-y-0.5 transition-all whitespace-nowrap cursor-pointer"
           data-path="flavor-menu" href="#vault" title="View Stuffed Cookie Flavors">Flavor Vault</a><a
-          class="bg-white hover:bg-[#33DCE6]/20 text-[#241131] px-3.5 py-1.5 rounded-full border-2 border-[#241131] hover:-translate-y-0.5 transition-all whitespace-nowrap cursor-pointer"
+          id="nav-box-builder"
+          class="bg-white hover:bg-[#fae8ff] text-[#241131] px-3.5 py-1.5 rounded-full border-2 border-[#241131] hover:-translate-y-0.5 transition-all whitespace-nowrap cursor-pointer"
           href="#box-builder">Build 6-Pack</a><a
-          class="bg-white hover:bg-[#B368F0]/20 text-[#241131] px-3.5 py-1.5 rounded-full border-2 border-[#241131] hover:-translate-y-0.5 transition-all whitespace-nowrap cursor-pointer"
+          id="nav-tent"
+          class="bg-white hover:bg-[#fae8ff] text-[#241131] px-3.5 py-1.5 rounded-full border-2 border-[#241131] hover:-translate-y-0.5 transition-all whitespace-nowrap cursor-pointer"
           href="#tent">Tent Pop-Up</a><a
           class="bg-white hover:bg-[#fae8ff] text-[#241131] px-3.5 py-1.5 rounded-full border-2 border-[#241131] hover:-translate-y-0.5 transition-all whitespace-nowrap cursor-pointer"
           data-path="find-us-and-order" href="#checkout" title="Contact &amp; FAQ / Pickups" style="opacity: 0;">Contact
@@ -1294,6 +1298,61 @@
     // Initialize UI on load
     document.addEventListener('DOMContentLoaded', () => {
       updateUI();
+    });
+
+    // ── Dynamic Nav Active Highlight ──────────────────────────────────────────
+    // Maps each section id → the nav link that should light up when that section
+    // is scrolled into view.
+    const navSectionMap = {
+      'home':        'nav-home',
+      'vault':       'nav-vault',
+      'box-builder': 'nav-box-builder',
+      'tent':        'nav-tent',
+    };
+
+    // Classes for active (pink) vs inactive (white) state
+    const NAV_ACTIVE   = ['bg-[#FF6FCB]', 'text-[#241131]', 'pop-shadow', 'font-black'];
+    const NAV_INACTIVE = ['bg-white', 'hover:bg-[#fae8ff]', 'text-[#241131]', 'font-bold'];
+
+    function setActiveNav(sectionId) {
+      // Remove active style from all tracked nav links
+      Object.values(navSectionMap).forEach(navId => {
+        const el = document.getElementById(navId);
+        if (!el) return;
+        NAV_ACTIVE.forEach(c => el.classList.remove(c));
+        NAV_INACTIVE.forEach(c => el.classList.add(c));
+        el.classList.remove('px-4'); // home uses slightly wider padding
+        el.classList.add('px-3.5');
+      });
+      // Apply active style to the matching nav link
+      const activeId = navSectionMap[sectionId];
+      if (!activeId) return;
+      const activeEl = document.getElementById(activeId);
+      if (!activeEl) return;
+      NAV_INACTIVE.forEach(c => activeEl.classList.remove(c));
+      NAV_ACTIVE.forEach(c => activeEl.classList.add(c));
+      // Home link gets slightly wider padding to match its original look
+      if (activeId === 'nav-home') {
+        activeEl.classList.remove('px-3.5');
+        activeEl.classList.add('px-4');
+      }
+    }
+
+    // IntersectionObserver watches each section; when ≥30% of a section enters
+    // the viewport, it becomes the "active" section and the nav updates.
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setActiveNav(entry.target.id);
+        }
+      });
+    }, { threshold: 0.3, rootMargin: '-114px 0px 0px 0px' });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      Object.keys(navSectionMap).forEach(id => {
+        const section = document.getElementById(id);
+        if (section) observer.observe(section);
+      });
     });
   </script>
 
